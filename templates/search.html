@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+     <h1> Filter : </h1>  <a name="return" href="/"> Main </a>
+     <form action="/search/"  method="post" > {% csrf_token %}
+		<p>
+			PC name :&nbsp;
+            <select name="computer" onchange="combo(this, 'computer')">
+                {% for pc in list_pcs %}
+                    <option value="{{pc.id}}">{{pc}}</option>
+                {% endfor %}
+            </select></p>
+		<p>
+			Publisher :&nbsp;
+            <select name="publisher" onchange="combo(this, 'publisher')">
+                    <option value="all">All</option>
+                {% for pub in list_publishers %}
+                    <option value="{{pub.id}}">{{pub}}</option>
+                {% endfor %}
+            </select></p>
+        <p>
+             <input type="submit" value="Show Selected Software">
+        </p>
+     </form>
+    </body>
+</html>

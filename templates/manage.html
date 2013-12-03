@@ -1,0 +1,71 @@
+<html xmlns:style="http://www.w3.org/1999/html">
+	<head>
+		<title></title>
+	</head>
+	<body>
+
+		<table align="left" border="0" cellpadding="0" cellspacing="0" style="width: 500px;">
+			<tbody>
+                <tr>
+                    <td width="80%"><b>Unknown</b></td><a name="return" href="/"> Main </a> <td></td>
+                </tr>
+				<tr>
+                    <form action="/manage/" method="post">  {% csrf_token %}
+					<td>
+						<select name="software" multiple="true" size="10" title="Unknown license type">
+                            {% for sw in unknown_software %}
+                               <option value="{{sw.id}}">{{sw}}</option>
+                            {% endfor %}
+                        </select></td>
+                    <td>
+                              <input name="action" type="submit" value="Mark Free" />
+                              <input name="action" type="submit" value="Mark Licensed" />
+
+                    </td>
+                    </form>
+
+				</tr>
+                <tr>
+                    <td> <b>Free</b></td><td></td>
+                </tr>
+				<tr>
+                    <form action="/manage/" method="post">  {% csrf_token %}
+					<td>
+						<select name="software" multiple="true" size="10" title="Free Software. Do not need license">
+                            {% for sw in free_software %}
+                                <option value="{{sw.id}}">{{sw}}</option>
+                            {% endfor %}
+                        </select></td>
+                    <td>
+                              <input name="action" type="submit" value="Mark Unknown"  />
+                              <input name="action" type="submit" value="Mark Licensed" />
+
+                    </td>
+                    </form>
+
+				</tr>
+                <tr>
+                    <td><b>Licensed</b></td><td></td>
+                </tr>
+				<tr>
+                    <form action="/manage/" method="post">  {% csrf_token %}
+					<td>
+						<select name="software" multiple="true" size="10" title="Need License">
+                            {% for sw in licensed_software %}
+                               <option value="{{sw.id}}">{{sw}}</option>
+                            {% endfor %}
+                        </select></td>
+                    <td>
+                              <input name="action" type="submit" value="Mark Unknown"  />
+                              <input name="action" type="submit" value="Mark Free" />
+                    </td>
+                    </form>
+
+				</tr>
+
+			</tbody>
+		</table>
+		<p>
+			&nbsp;</p>
+	</body>
+</html>

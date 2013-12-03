@@ -1,0 +1,77 @@
+<html xmlns:style="http://www.w3.org/1999/html">
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<table align="left" border="0" cellpadding="0" cellspacing="0" style="width: 500px;">
+            <p>
+                <h3>{{ computer}} </h3> <p> <a name="return" href="/"> Main </a> </p>
+            </p>
+            <p>
+                <form action="/download/" name="download" method="post"> {% csrf_token %}
+                        <input type="hidden" name="computer_id" value="{{ computer_id }}"/>
+                        <input type="submit" name="download" value="Download Report"/>
+
+                </form>
+            </p>
+			<tbody>
+                <tr>
+                    <td width="80%"><b>Unknown</b></td><td></td>
+                </tr>
+				<tr>
+                    <form action="/report_pc/" method="post">  {% csrf_token %}
+					<td>
+						<select name="software" multiple="true" size="10" title="Unknown license type">
+                            {% for sw in unknown_software %}
+                               <option value="{{sw.id}}">{{sw}}</option>
+                            {% endfor %}
+                        </select></td>
+                    <td>
+
+
+                    </td>
+                    </form>
+
+				</tr>
+                <tr>
+                    <td> <b>Free</b></td><td></td>
+                </tr>
+				<tr>
+                    <form action="/report_pc/" method="post">  {% csrf_token %}
+					<td>
+						<select name="software" multiple="true" size="10" title="Free Software. Do not need license">
+                            {% for sw in free_software %}
+                                <option value="{{sw.id}}">{{sw}}</option>
+                            {% endfor %}
+                        </select></td>
+                    <td>
+
+
+                    </td>
+                    </form>
+
+				</tr>
+                <tr>
+                    <td><b>Licensed</b></td><td></td>
+                </tr>
+				<tr>
+                    <form action="/report_pc/" method="post">  {% csrf_token %}
+					<td>
+						<select name="software" multiple="true" size="10" title="Need License">
+                            {% for sw in licensed_software %}
+                               <option value="{{sw.id}}">{{sw}}</option>
+                            {% endfor %}
+                        </select></td>
+                    <td>
+
+                    </td>
+                    </form>
+
+				</tr>
+
+			</tbody>
+		</table>
+		<p>
+			&nbsp;</p>
+	</body>
+</html>
