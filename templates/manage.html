@@ -3,19 +3,20 @@
 {% block page_content %}
 
     <script>
-        function swinfo() {
+        function swinfo(form_id) {
 
-            document.getElementById('appinfo').submit();
+            document.getElementById(form_id).action='/appinfo/';
+            document.getElementById(form_id).submit();
 
         }
     </script>
 
 <div class="span4">
 <h4>License type unknown</h4>
-        <form id="appinfo"  action="/appinfo/" method="post">  {% csrf_token %}
+        <form id="unknown_software_id"  action="/manage/" method="post">  {% csrf_token %}
             <select name="software" multiple="true" size="10" title="Unknown license type">
                 {% for sw in unknown_software %}
-                   <option value="{{sw.id}}" ondblclick="swinfo();" >{{sw}}</option>
+                   <option value="{{sw.id}}" ondblclick="swinfo('unknown_software_id');" >{{sw}}</option>
                 {% endfor %}
             </select>
 
@@ -28,10 +29,10 @@
 
 <div class="span4">
 <h4>Free software</h4>
-        <form id="appinfo" action="/manage/" method="post">  {% csrf_token %}
+        <form id="free_software_id" action="/manage/" method="post">  {% csrf_token %}
             <select name="software" multiple="true" size="10" title="Unknown license type">
                 {% for sw in free_software %}
-                   <option value="{{sw.id}}" ondblclick="swinfo();">{{sw}}</option>
+                   <option value="{{sw.id}}" ondblclick="swinfo('free_software_id');">{{sw}}</option>
                 {% endfor %}
             </select>
         <p>
@@ -43,10 +44,10 @@
 
 <div class="span4">
 <h4>Software require license</h4>
-        <form id="appinfo"  action="/manage/" method="post">  {% csrf_token %}
+        <form id="licensed_software_id"  action="/manage/" method="post">  {% csrf_token %}
             <select name="software" multiple="true" size="10" title="Need License">
                 {% for sw in licensed_software %}
-                   <option value="{{sw.id}}" ondblclick="swinfo();" >{{sw}}</option>
+                   <option value="{{sw.id}}" ondblclick="swinfo('licensed_software_id');" >{{sw}}</option>
                 {% endfor %}
             </select>
 
