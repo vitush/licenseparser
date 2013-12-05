@@ -13,7 +13,7 @@ from licenses import  settings
 
 def reload(request):
     print("Reload")
-    licensesIO.loadData(settings.DATA_DIR)
+    licensesIO.loadData(settings.DATA_ROOT)
     return HttpResponseRedirect("/")
 
 def index(request):

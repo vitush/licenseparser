@@ -68,9 +68,9 @@ def loadData(dir):
                                             )
             if created:
                 application.save()
-                print ("=> Added to SoftwareDB: (%s , %s) - New!"% (computer.name,sw["name"]))
+                print ("=> Found : (%s , %s) - New!"% (computer.name,sw["name"]))
             else:
-                print ("=> Added to SoftwareDB: (%s , %s)"% (computer.name,sw["name"]))
+                print ("=> Found : (%s , %s)"% (computer.name,sw["name"]))
 
             computer.applications.add(application)
 

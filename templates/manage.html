@@ -1,71 +1,100 @@
-<html xmlns:style="http://www.w3.org/1999/html">
-	<head>
-		<title></title>
-	</head>
-	<body>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>License manager</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="vitush">
 
-		<table align="left" border="0" cellpadding="0" cellspacing="0" style="width: 500px;">
-			<tbody>
-                <tr>
-                    <td width="80%"><b>Unknown</b></td><a name="return" href="/"> Main </a> <td></td>
-                </tr>
-				<tr>
-                    <form action="/manage/" method="post">  {% csrf_token %}
-					<td>
-						<select name="software" multiple="true" size="10" title="Unknown license type">
-                            {% for sw in unknown_software %}
-                               <option value="{{sw.id}}">{{sw}}</option>
-                            {% endfor %}
-                        </select></td>
-                    <td>
-                              <input name="action" type="submit" value="Mark Free" />
-                              <input name="action" type="submit" value="Mark Licensed" />
 
-                    </td>
-                    </form>
 
-				</tr>
-                <tr>
-                    <td> <b>Free</b></td><td></td>
-                </tr>
-				<tr>
-                    <form action="/manage/" method="post">  {% csrf_token %}
-					<td>
-						<select name="software" multiple="true" size="10" title="Free Software. Do not need license">
-                            {% for sw in free_software %}
-                                <option value="{{sw.id}}">{{sw}}</option>
-                            {% endfor %}
-                        </select></td>
-                    <td>
-                              <input name="action" type="submit" value="Mark Unknown"  />
-                              <input name="action" type="submit" value="Mark Licensed" />
+<link href="/static/css/bootstrap.css" rel="stylesheet">
+<style type="text/css">body{padding-top:60px;padding-bottom:40px;}</style>
+<link href="/static/css/bootstrap-responsive.css" rel="stylesheet">
 
-                    </td>
-                    </form>
 
-				</tr>
-                <tr>
-                    <td><b>Licensed</b></td><td></td>
-                </tr>
-				<tr>
-                    <form action="/manage/" method="post">  {% csrf_token %}
-					<td>
-						<select name="software" multiple="true" size="10" title="Need License">
-                            {% for sw in licensed_software %}
-                               <option value="{{sw.id}}">{{sw}}</option>
-                            {% endfor %}
-                        </select></td>
-                    <td>
-                              <input name="action" type="submit" value="Mark Unknown"  />
-                              <input name="action" type="submit" value="Mark Free" />
-                    </td>
-                    </form>
 
-				</tr>
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="/static/ico/apple-touch-icon-57-precomposed.png">
+<link rel="shortcut icon" href="/static/ico/favicon.png">
 
-			</tbody>
-		</table>
-		<p>
-			&nbsp;</p>
-	</body>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="navbar-inner">
+<div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</a>
+<a class="brand" href="/">License management tool</a>
+
+</div>
+</div>
+</div>
+<div class="container">
+
+<div class="row">
+<div class="span4">
+<h4>License type unknown</h4>
+        <form action="/manage/" method="post">  {% csrf_token %}
+            <select name="software" multiple="true" size="10" title="Unknown license type">
+                {% for sw in unknown_software %}
+                   <option value="{{sw.id}}">{{sw}}</option>
+                {% endfor %}
+            </select>
+
+        <p>
+        <input name="action" type="submit" value="Mark Free"  />
+        <input name="action" type="submit" value="Mark Licensed" />
+       </p>
+   </form>
+</div>
+
+<div class="span4">
+<h4>Free software</h4>
+        <form action="/manage/" method="post">  {% csrf_token %}
+            <select name="software" multiple="true" size="10" title="Unknown license type">
+                {% for sw in free_software %}
+                   <option value="{{sw.id}}">{{sw}}</option>
+                {% endfor %}
+            </select>
+        <p>
+        <input name="action" type="submit" value="Mark Unknown"  />
+        <input name="action" type="submit" value="Mark Licensed" />
+        </p>
+   </form>
+</div>
+
+<div class="span4">
+<h4>Software require license</h4>
+        <form action="/manage/" method="post">  {% csrf_token %}
+            <select name="software" multiple="true" size="10" title="Need License">
+                {% for sw in licensed_software %}
+                   <option value="{{sw.id}}">{{sw}}</option>
+                {% endfor %}
+            </select>
+
+        <p>
+        <input name="action" type="submit" value="Mark Unknown"  />
+        <input name="action" type="submit" value="Mark Free" />
+        </p>
+           </form>
+</div>
+</div>
+
+
+
+<hr>
+<footer>
+<p>&copy; Symphony-Solutions 2013</p>
+</footer>
+</div>
+
+
+
+    </body>
 </html>

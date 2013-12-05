@@ -1,10 +1,21 @@
 # Django settings for licenses project.
 
+import os 
+
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
-DATA_DIR="/DNI/Data"
-DB_FILE="/DNI/db"
+PROJECT_PATH = os.path.abspath(os.path.dirname(__name__))
+DB_ROOT = os.path.join(PROJECT_PATH, 'database')
+DB_FILE = os.path.join(DB_ROOT, 'licenses.db')
+DATA_ROOT = os.path.join(PROJECT_PATH, 'data')
+STATIC_URL = '/static/'
+
+
+STATICFILES_DIRS = (
+  os.path.join(PROJECT_PATH, 'staticfiles/'),
+)
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -32,7 +43,7 @@ ALLOWED_HOSTS = []
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
 # In a Windows environment this must be set to your system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'Europe/Kiev'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -64,18 +75,24 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = ''
+#STATIC_ROOT = ''
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
-STATIC_URL = '/static/'
+#STATIC_URL = '/static/'
 
 # Additional locations of static files
-STATICFILES_DIRS = (
+#STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-)
+#)
+
+
+#STATICFILES_DIRS = (
+#    os.path.join(PROJECT_PATH, "static"),
+#    '/var/www/static/',
+#)
 
 # List of finder classes that know how to find static files in
 # various locations.
