@@ -3,6 +3,14 @@
 {% block page_content %}
 
 
+ <p>
+     <form action="/download/" name="download" method="post"> {% csrf_token %}
+             <input type="hidden" name="computer_id" value="{{ computer_id }}"/>
+             <input type="submit" name="download" value="Download Report"/>
+
+     </form>
+ </p>
+
 <div class="span4">
 <h4>License type unknown</h4>
         <form action="/report_pc/" method="post">  {% csrf_token %}

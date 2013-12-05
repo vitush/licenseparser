@@ -69,6 +69,8 @@ def search(request):
 
 
 
+def saveapp(request):
+    pass
 
 def appinfo(request):
     c = {}
@@ -91,7 +93,7 @@ def appinfo(request):
         c['app_name'] = application.name
         c['app_version'] = 0
         c['app_publisher'] = publisher.name
-        c['app_license'] = application.license
+        c['app_license'] = application.get_license_txt()
         c['app_cost'] = 0
 
     return render_to_response('appinfo.html',c)

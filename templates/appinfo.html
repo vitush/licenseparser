@@ -4,6 +4,8 @@
 
     <h4>Application Info:</h4>
 
+    <form action="saveapp" method="post" name="save"> {% csrf_token %}
+
     <div class="span1">
         Name: <br><br>
         Version: <br><br>
@@ -17,8 +19,10 @@
         <input name="version"   readonly value="{{ app_version }}"><br><br>
         <input name="publisher" readonly value="{{ app_publisher }}"><br><br>
         <input name="license"   readonly value="{{ app_license }}"><br><br>
-        <input name="cost"      readonly value="{{ app_cost }}"><br><br>
+        <input name="cost"               value="{{ app_cost }}"><br><br>
     </div>
+
+</form>
 
 
 {% endblock %}
