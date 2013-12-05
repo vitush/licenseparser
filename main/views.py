@@ -9,12 +9,22 @@ import models
 import csv
 from licenses import  settings
 
-
-
 def reload(request):
     print("Reload")
-    licensesIO.loadData(settings.DATA_ROOT)
-    return HttpResponseRedirect("/")
+    licensesIO.LoadData()
+    return HttpResponseRedirect("/load/")
+
+def load(request):
+    c = {}
+    c.update(csrf(request))
+    progress = licensesIO.getProgress()
+    print("Progress %s"%progress)
+    c['progress_level'] = progress
+    c['current_file'] = licensesIO.getCurrent()
+    if progress == 100:
+        return render_to_response('index.html',c)
+    else:
+        return render_to_response('load.html',c)
 
 def index(request):
     c = {}
@@ -60,23 +70,31 @@ def search(request):
 
 
 
-def applicationinfo(request):
+def appinfo(request):
     c = {}
     c.update(csrf(request))
 
+    print("App ID ")
     if request.method == 'POST':
-        application_id = request.POST['application_id']
-        application = models.Application.objects.filter(id=application_id)
-        publisher = models.Publisher.objects.filter(publisher=application.publisher)
-        license = application.license
+        print("Post")
+    if request.method == 'GET':
+        print("Get")
 
+    if request.method == 'POST':
+        application_id = request.POST['software']
 
-        c['application_name'] = application.name
-        c['publisher'] = publisher
-        c['license'] = license
-        c['price'] = 0
+        print("App ID %s"%application_id)
 
-    return render_to_response('manage.html',c)
+        application = models.Application.objects.get(id=application_id)
+        publisher = models.Publisher.objects.get(name=application.publisher)
+
+        c['app_name'] = application.name
+        c['app_version'] = 0
+        c['app_publisher'] = publisher.name
+        c['app_license'] = application.license
+        c['app_cost'] = 0
+
+    return render_to_response('appinfo.html',c)
 
 
 def manage(request):

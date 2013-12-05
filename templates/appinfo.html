@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+
+    <h4>Application Info:</h4>
+
+    <div class="span1">
+        Name: <br><br>
+        Version: <br><br>
+        Publisher: <br><br>
+        License Type: <br><br>
+        Cost: <br><br>
+    </div>
+
+    <div class="span3">
+        <input name="name"      readonly value="{{ app_name }}"><br><br>
+        <input name="version"   readonly value="{{ app_version }}"><br><br>
+        <input name="publisher" readonly value="{{ app_publisher }}"><br><br>
+        <input name="license"   readonly value="{{ app_license }}"><br><br>
+        <input name="cost"      readonly value="{{ app_cost }}"><br><br>
+    </div>
+
+
+{% endblock %}

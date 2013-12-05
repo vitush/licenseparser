@@ -19,7 +19,7 @@ class Publisher(models.Model):
 
 class Application(models.Model):
     name = models.CharField(max_length=100,unique=False)
-    #version = models.IntegerField(default=0)
+    version = models.CharField(max_length=30,unique=False)
     publisher = models.ForeignKey(Publisher,unique=False)
     license = models.IntegerField(default=0)
     cost = models.IntegerField(default=0)

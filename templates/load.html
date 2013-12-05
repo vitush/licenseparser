@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block refresh %}
+    <meta http-equiv="refresh" content="1" >
+{% endblock %}
+
+{% block page_content %}
+    <div class="progress">
+      <div class="bar" style="width: {{ progress_level }}%;"></div>
+    </div>
+    <div>
+        Progress {{ progress_level }} <br>
+        Loading: {{ current_file }} ...
+    </div>
+{% endblock %}
