@@ -4,10 +4,8 @@
     <bookmark url="file://$PROJECT_DIR$/templates/load.html" line="14" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0390a5a0-99cb-4d99-9a99-40cbfe6dec10" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/appinfo.html" afterPath="$PROJECT_DIR$/templates/appinfo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/report_pc.html" afterPath="$PROJECT_DIR$/templates/report_pc.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/views.py" afterPath="$PROJECT_DIR$/main/views.py" />
+    <list default="true" id="0390a5a0-99cb-4d99-9a99-40cbfe6dec10" name="Default" comment="fixed download&#10;">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/start.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="a404b25d-6ec1-41eb-868f-7c8799b765b0" name="New changelist" comment="" />
@@ -35,7 +33,7 @@
       <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="8" selection-start="2260" selection-end="2260" vertical-scroll-proportion="0.24242425" vertical-offset="816" max-vertical-offset="2205">
+            <state line="112" column="62" selection-start="3327" selection-end="3327" vertical-scroll-proportion="0.821192" vertical-offset="816" max-vertical-offset="2205">
               <folding />
             </state>
           </provider>
@@ -115,7 +113,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/templates/showpcreport.html" />
         <option value="$PROJECT_DIR$/templates/applicationinfo.html" />
         <option value="$PROJECT_DIR$/templates/pcreport.html" />
         <option value="$PROJECT_DIR$/templates/info_app.html" />
@@ -131,14 +128,15 @@
         <option value="$PROJECT_DIR$/templates/report_pc.html" />
         <option value="$PROJECT_DIR$/templates/appinfo.html" />
         <option value="$PROJECT_DIR$/main/views.py" />
+        <option value="$PROJECT_DIR$/start.sh" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-1" />
     <option name="y" value="-4" />
-    <option name="width" value="1368" />
-    <option name="height" value="773" />
+    <option name="width" value="1922" />
+    <option name="height" value="1085" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -540,7 +538,11 @@
       <created>1386284204739</created>
       <updated>1386284204739</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fixed download&#10;">
+      <created>1386285062284</created>
+      <updated>1386285062284</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -564,7 +566,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-4" width="1368" height="773" extended-state="6" />
+    <frame x="-1" y="-4" width="1922" height="1085" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -573,7 +575,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32834226" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24961948" sideWeight="0.6700337" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13601823" sideWeight="0.67165774" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.09572192" sideWeight="0.67165774" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36684492" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -597,7 +599,8 @@
     </option>
     <MESSAGE value="Integrated twitter-bootstrap" />
     <MESSAGE value="Load files in separated thread" />
-    <option name="LAST_COMMIT_MESSAGE" value="Load files in separated thread" />
+    <MESSAGE value="fixed download&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed download&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -612,11 +615,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="0" selection-start="4305" selection-end="4305" vertical-scroll-proportion="0.0" vertical-offset="1372" max-vertical-offset="30690" />
-      </provider>
-    </entry>
     <entry file="file:///usr/local/lib/python2.7/dist-packages/django/db/models/manager.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="121" column="0" selection-start="4721" selection-end="4721" vertical-scroll-proportion="1.4716495" vertical-offset="1184" max-vertical-offset="3960">
@@ -709,9 +707,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/start.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="12" selection-end="12" vertical-scroll-proportion="0.01655629" vertical-offset="0" max-vertical-offset="906">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="8" selection-start="2260" selection-end="2260" vertical-scroll-proportion="0.24242425" vertical-offset="816" max-vertical-offset="2205">
+        <state line="112" column="62" selection-start="3327" selection-end="3327" vertical-scroll-proportion="0.821192" vertical-offset="816" max-vertical-offset="2205">
           <folding />
         </state>
       </provider>
