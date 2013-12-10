@@ -2,6 +2,13 @@
 
 {% block page_content %}
 
+<style type="text/css">
+.selectwidthauto
+{
+     width:350px !important;
+}
+</style>
+
 
  <p>
      <form action="/download/" name="download" method="post"> {% csrf_token %}
@@ -14,9 +21,9 @@
 <div class="span4">
 <h4>License type unknown</h4>
         <form action="/report_pc/" method="post">  {% csrf_token %}
-            <select name="software" multiple="true" size="10" title="Unknown license type">
+            <select name="software" multiple="true" size="10" title="Unknown license type" class="selectwidthauto">
                 {% for sw in unknown_software %}
-                   <option value="{{sw.id}}">{{sw}}</option>
+                   <option value="{{sw.id}}" ondblclick="swinfo('unknown_software_id');"  title="{{sw}}">{{sw}}</option>
                 {% endfor %}
             </select>
         </form>
@@ -26,9 +33,9 @@
 <div class="span4">
 <h4>Free software</h4>
         <form action="/report_pc/" method="post">  {% csrf_token %}
-            <select name="software" multiple="true" size="10" title="Unknown license type">
+            <select name="software" multiple="true" size="10" title="Unknown license type" class="selectwidthauto">
                 {% for sw in free_software %}
-                   <option value="{{sw.id}}">{{sw}}</option>
+                   <option value="{{sw.id}}" ondblclick="swinfo('unknown_software_id');"  title="{{sw}}">{{sw}}</option>
                 {% endfor %}
             </select>
         </form>
@@ -37,9 +44,9 @@
 <div class="span4">
 <h4>Software require license</h4>
         <form action="/report_pc/" method="post">  {% csrf_token %}
-            <select name="software" multiple="true" size="10" title="Need License">
+            <select name="software" multiple="true" size="10" title="Need License" class="selectwidthauto">
                 {% for sw in licensed_software %}
-                   <option value="{{sw.id}}">{{sw}}</option>
+                   <option value="{{sw.id}}" ondblclick="swinfo('unknown_software_id');"  title="{{sw}}">{{sw}}</option>
                 {% endfor %}
             </select>
         </form>
