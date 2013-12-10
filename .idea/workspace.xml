@@ -71,7 +71,7 @@
       <file leaf-file-name="licenses.sh" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/licenses.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="20" selection-start="804" selection-end="804" vertical-scroll-proportion="0.84974957" vertical-offset="46" max-vertical-offset="795">
+            <state line="26" column="24" selection-start="658" selection-end="658" vertical-scroll-proportion="0.5993322" vertical-offset="31" max-vertical-offset="915">
               <folding />
             </state>
           </provider>
@@ -641,7 +641,11 @@
       <created>1386680086455</created>
       <updated>1386680086455</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="&#10;q">
+      <created>1386680171530</created>
+      <updated>1386680171530</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -706,7 +710,9 @@
     <MESSAGE value="a" />
     <MESSAGE value="Unicode changes" />
     <MESSAGE value="added status check" />
-    <option name="LAST_COMMIT_MESSAGE" value="added status check" />
+    <MESSAGE value="&#10;" />
+    <MESSAGE value="&#10;q" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;q" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -832,7 +838,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/licenses.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="20" selection-start="804" selection-end="804" vertical-scroll-proportion="0.84974957" vertical-offset="46" max-vertical-offset="795">
+        <state line="26" column="24" selection-start="658" selection-end="658" vertical-scroll-proportion="0.5993322" vertical-offset="31" max-vertical-offset="915">
           <folding />
         </state>
       </provider>

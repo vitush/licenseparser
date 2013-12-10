@@ -18,7 +18,15 @@ set -e
 
 case "$1" in
   start)
-        $CMD  > /tmp/licenses.log  2>&1  &
+        pid=`ps ax | grep runserver  | grep -v grep | awk '{ print $1}'`
+        if [ "x$pid" != "x" ]
+        then
+            echo Process already running with PID = $pid
+        else
+            $CMD  > /tmp/licenses.log  2>&1  &
+            echo Started
+        fi
+
         ;;
   stop)
         kill ` ps ax | grep runserver  | grep -v grep | awk '{ print $1}' `
