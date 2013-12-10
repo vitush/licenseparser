@@ -3,7 +3,6 @@ from django.db import models
 import unicodedata
 
 # Create your models here
-
 class Publisher(models.Model):
     name = models.CharField(max_length=50,unique=False)
 
@@ -24,7 +23,7 @@ class Application(models.Model):
     installation = models.CharField(max_length=100,unique=False,default='')
     license = models.IntegerField(default=0)
     cost = models.IntegerField(default=0)
-
+    comment = models.CharField(max_length=250,unique=False)
 
     def __unicode__(self):
         return u'%s' % (self.name)

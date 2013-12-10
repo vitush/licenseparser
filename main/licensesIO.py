@@ -3,6 +3,10 @@ from docutils.nodes import version
 __author__ = 'vitush'
 import unicodedata
 
+
+def cvttxt(intxt):
+     return unicodedata.normalize('NFKD', intxt).encode('ascii','ignore')
+
 from xml.dom.minidom import *
 import models
 import threading
@@ -105,7 +109,7 @@ class myThread (threading.Thread):
                 if element[0].firstChild.data is not None:
                      ver = element[0].firstChild.data
                      #ver = unicodedata.normalize('NFKD', element[0].firstChild.data).encode('ascii','ignore')
-                     sw["version"] += element[0].firstChild.data
+                     sw["version"] = element[0].firstChild.data
                      sw["name"] += " - "
                      sw["name"] += element[0].firstChild.data
 

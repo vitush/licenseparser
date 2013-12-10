@@ -16,7 +16,9 @@
 
     <h4>Application Info:</h4>
 
-    <form action="saveapp" method="post" name="save"> {% csrf_token %}
+    <form action="/appinfo/" method="post" name="save"> {% csrf_token %}
+
+        <input name="software" value="{{ app_id }}" type="hidden" >
 
     <div class="span1">
         Name: <br><br>
@@ -25,6 +27,8 @@
         License Type: <br><br>
         Cost: <br><br>
         Installation: <br><br>
+
+
     </div>
 
     <div class="span3">
@@ -35,14 +39,20 @@
         <input name="cost"               value="{{ app_cost }}" class="appname"><br><br>
         <input name="installation" readonly value="{{ app_installation }}" class="appname" ><br><br>
 
-
-		<p>
-			Installed on :&nbsp;
+        <p> Comment:&nbsp;
+            <textarea type="text" cols="10" name="comment">
+               {{ app_comment }}
+            </textarea>
+            <input type="submit" value="save" name="action" >
+        </p>
+        <p>Installed on :&nbsp;
             <select name="pclist" size="10"">
                 {% for pc in pclist %}
                    <option value="{{pc.id}}" >{{pc.name}}</option>
                 {% endfor %}
             </select>
+        </p>
+
 
 
     </div>

@@ -80,19 +80,30 @@ def appinfo(request):
     c.update(csrf(request))
 
     if request.method == 'POST':
-        application_id = request.POST['software']
 
+
+        application_id = request.POST['software']
 
         application = models.Application.objects.get(id=application_id)
         publisher = models.Publisher.objects.get(name=application.publisher)
 
+        # Save Data
+        act = request.POST.get('action', None)
+        if act == "save":
+            application.comment = request.POST['comment']
+            application.cost= request.POST['cost']
+            application.save()
+            print(application.comment)
+
+        c['app_id'] = application_id
         c['app_name'] = application.name
-        c['app_version'] = 0
+        c['app_version'] = application.version
         c['app_publisher'] = publisher.name
         c['app_license'] = application.get_license_txt()
-        c['app_cost'] = 0
+        c['app_cost'] = application.cost
         c['pclist'] = application.computer_set.all()
         c["app_installation"] = application.installation
+        c["app_comment"] = application.comment
 
     return render_to_response('appinfo.html',c)
 
