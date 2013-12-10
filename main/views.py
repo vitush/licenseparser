@@ -63,11 +63,6 @@ def search(request):
         else:
             publisher = models.Publisher.objects.filter(id=publisher_id)
 
-
-        print (computer)
-        for app in computer.applications.filter(publisher__in=publisher):
-            print ( app.name)
-
         c['computer'] = computer
         c['computer_id'] = comp_id
         c['unknown_software'] =  computer.applications.filter(license=0,publisher__in=publisher)
