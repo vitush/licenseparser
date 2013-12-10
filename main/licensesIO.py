@@ -40,8 +40,16 @@ class myThread (threading.Thread):
             self.files_loaded = self.files_loaded + 1
             self.files_current = doc
 
-            pc_name = dom.getElementsByTagName('Computer_name')[0].firstChild.data
-            pc_owner = dom.getElementsByTagName('User_name')[0].firstChild.data
+            if  dom.getElementsByTagName('Computer_name')[0].firstChild is None :
+                pc_name = "Unknown"
+            else:
+                pc_name = dom.getElementsByTagName('Computer_name')[0].firstChild.data
+
+            if dom.getElementsByTagName('User_name')[0].firstChild is None:
+                pc_owner  = "Unknown"
+            else:
+                pc_owner = dom.getElementsByTagName('User_name')[0].firstChild.data
+
             computer, created = models.Computer.objects.get_or_create(name=pc_name, owner=pc_owner)
             if created:
                 print ("New Computer added to Database : %s"% pc_name)
