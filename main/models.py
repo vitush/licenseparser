@@ -21,6 +21,7 @@ class Application(models.Model):
     name = models.CharField(max_length=100,unique=False)
     version = models.CharField(max_length=30,unique=False)
     publisher = models.ForeignKey(Publisher,unique=False)
+    installation = models.CharField(max_length=100,unique=False,default='')
     license = models.IntegerField(default=0)
     cost = models.IntegerField(default=0)
 

@@ -79,6 +79,7 @@ class myThread (threading.Thread):
                                                 name=sw["name"],
                                                 publisher=publisher,
                                                 version=sw["version"],
+                                                installation=sw["installation"]
                                                 )
                 if created:
                     application.save()
@@ -88,7 +89,7 @@ class myThread (threading.Thread):
                 computer.applications.add(application)
 
     def parse_software(self,doc):
-        sw = {'name': u"Unknown",'publisher':u"Unknown", 'version':u"Unknown"}
+        sw = {'name': u"Unknown",'publisher':u"Unknown", 'version':u"Unknown", 'installation':u"Unknown"}
 
         element = doc.getElementsByTagName('DisplayName')
         if element is not None :
@@ -116,6 +117,13 @@ class myThread (threading.Thread):
                      pub = element[0].firstChild.data
                      #pub = unicodedata.normalize('NFKD', element[0].firstChild.data).encode('ascii','ignore')
                      sw["publisher"] = element[0].firstChild.data
+
+        element = doc.getElementsByTagName('InstallLocation')
+        if element is not None:
+            if element[0].firstChild is not None:
+                if element[0].firstChild.data is not None:
+                     pub = element[0].firstChild.data
+                     sw["installation"] = element[0].firstChild.data
         return sw
 
 
