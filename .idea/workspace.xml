@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0390a5a0-99cb-4d99-9a99-40cbfe6dec10" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/licenses.sh" afterPath="$PROJECT_DIR$/licenses.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/readme.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="a404b25d-6ec1-41eb-868f-7c8799b765b0" name="New changelist" comment="" />
@@ -66,10 +66,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="licenses.sh" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="licenses.sh" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/licenses.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="14" selection-start="683" selection-end="683" vertical-scroll-proportion="0.5298013" vertical-offset="0" max-vertical-offset="906">
+            <state line="32" column="14" selection-start="683" selection-end="683" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="readme.txt" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/readme.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="8" selection-start="8" selection-end="8" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="906">
               <folding />
             </state>
           </provider>
@@ -124,7 +133,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/templates/pcreport.html" />
         <option value="$PROJECT_DIR$/templates/info_app.html" />
         <option value="$PROJECT_DIR$/licenses/settings.py" />
         <option value="$PROJECT_DIR$/templates/search.html" />
@@ -140,6 +148,7 @@
         <option value="$PROJECT_DIR$/templates/appinfo.html" />
         <option value="$PROJECT_DIR$/start.sh" />
         <option value="$PROJECT_DIR$/licenses.sh" />
+        <option value="$PROJECT_DIR$/database/readme.txt" />
       </list>
     </option>
   </component>
@@ -579,7 +588,11 @@
       <created>1386674646646</created>
       <updated>1386674646646</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="a">
+      <created>1386675091927</created>
+      <updated>1386675091927</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -755,7 +768,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/licenses.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="14" selection-start="683" selection-end="683" vertical-scroll-proportion="0.5298013" vertical-offset="0" max-vertical-offset="906">
+        <state line="32" column="14" selection-start="683" selection-end="683" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="8" selection-start="8" selection-end="8" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="906">
           <folding />
         </state>
       </provider>
