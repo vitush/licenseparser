@@ -4,7 +4,7 @@
 
 
 {% block page_content %}
-
+<form action="/appinfo/" method="post" name="save"> {% csrf_token %}
 
 <style type="text/css">
 .appname
@@ -17,7 +17,7 @@
     <h4>Application Info:</h4>
     <div class="span8">
 
-        <form action="/appinfo/" method="post" name="save"> {% csrf_token %}
+
 
             <input name="software" value="{{ app_id }}" type="hidden" >
 
@@ -41,7 +41,7 @@
             <input name="installation" readonly value="{{ app_installation }}" class="appname" ><br><br>
 
         </div>
-        </form>
+
 
     </div>
     <div class="span4">
@@ -62,5 +62,5 @@
 
     </div>
 
-
+</form>
 {% endblock %}
