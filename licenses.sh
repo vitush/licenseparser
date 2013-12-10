@@ -18,7 +18,7 @@ set -e
 
 case "$1" in
   start)
-        $CMD  2>&1 > /dev/null &
+        $CMD  > /dev/null  2>&1  &
         ;;
   stop)
         kill ` ps ax | grep runserver  | grep -v grep | awk '{ print $1}' `
