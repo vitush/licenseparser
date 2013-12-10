@@ -1,6 +1,7 @@
 from docutils.nodes import version
 
 __author__ = 'vitush'
+import unicodedata
 
 from xml.dom.minidom import *
 import models
@@ -93,22 +94,25 @@ class myThread (threading.Thread):
         if element is not None :
             if element[0].firstChild is not None:
                 if element[0].firstChild.data is not None:
-                     sw["name"] = element[0].firstChild.data
+                     name = unicodedata.normalize('NFKD', element[0].firstChild.data).encode('ascii','ignore')
+                     sw["name"] = name
 
         element = doc.getElementsByTagName('DisplayVersion')
         if element is not None :
             if element[0].firstChild is not None:
                 if element[0].firstChild.data is not None:
-                     sw["version"] += element[0].firstChild.data
+                     ver = unicodedata.normalize('NFKD', element[0].firstChild.data).encode('ascii','ignore')
+                     sw["version"] += ver
                      sw["name"] += " - "
-                     sw["name"] += element[0].firstChild.data
+                     sw["name"] += ver
 
 
         element = doc.getElementsByTagName('Publisher')
         if element is not None:
             if element[0].firstChild is not None:
                 if element[0].firstChild.data is not None:
-                     sw["publisher"] = element[0].firstChild.data
+                     pub = unicodedata.normalize('NFKD', element[0].firstChild.data).encode('ascii','ignore')
+                     sw["publisher"] = pub
         return sw
 
 

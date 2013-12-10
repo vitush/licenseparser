@@ -4,8 +4,8 @@
     <bookmark url="file://$PROJECT_DIR$/templates/load.html" line="15" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0390a5a0-99cb-4d99-9a99-40cbfe6dec10" name="Default" comment="a">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/licenses.sh" afterPath="$PROJECT_DIR$/licenses.sh" />
+    <list default="true" id="0390a5a0-99cb-4d99-9a99-40cbfe6dec10" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/licensesIO.py" afterPath="$PROJECT_DIR$/main/licensesIO.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="a404b25d-6ec1-41eb-868f-7c8799b765b0" name="New changelist" comment="" />
@@ -42,8 +42,10 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="0" selection-start="997" selection-end="997" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="1065">
-              <folding />
+            <state line="43" column="85" selection-start="1092" selection-end="1170" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1095">
+              <folding>
+                <element signature="e#0#52#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,10 +68,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="licenses.sh" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="licenses.sh" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/licenses.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="34" selection-start="435" selection-end="435" vertical-scroll-proportion="0.33112583" vertical-offset="0" max-vertical-offset="906">
+            <state line="20" column="34" selection-start="435" selection-end="435" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
               <folding />
             </state>
           </provider>
@@ -97,10 +99,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="licensesIO.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="licensesIO.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/licensesIO.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="0" selection-start="1390" selection-end="1390" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="2250">
+            <state line="85" column="74" selection-start="2797" selection-end="2797" vertical-scroll-proportion="0.3642384" vertical-offset="945" max-vertical-offset="2310">
               <folding />
             </state>
           </provider>
@@ -132,7 +134,6 @@
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/licenses/urls.py" />
         <option value="$PROJECT_DIR$/templates/report_pc.html" />
-        <option value="$PROJECT_DIR$/main/licensesIO.py" />
         <option value="$PROJECT_DIR$/templates/load.html" />
         <option value="$PROJECT_DIR$/templates/manage.html" />
         <option value="$PROJECT_DIR$/main/views.py" />
@@ -140,6 +141,7 @@
         <option value="$PROJECT_DIR$/start.sh" />
         <option value="$PROJECT_DIR$/database/readme.txt" />
         <option value="$PROJECT_DIR$/licenses.sh" />
+        <option value="$PROJECT_DIR$/main/licensesIO.py" />
       </list>
     </option>
   </component>
@@ -595,7 +597,11 @@
       <created>1386677914608</created>
       <updated>1386677914608</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="a">
+      <created>1386677985337</created>
+      <updated>1386677985337</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -668,8 +674,12 @@
           <line>115</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/main/models.py</url>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="52" />
+      <option name="time" value="53" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -730,20 +740,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="997" selection-end="997" vertical-scroll-proportion="0.0" vertical-offset="159" max-vertical-offset="1065">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/licensesIO.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="0" selection-start="1390" selection-end="1390" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="2250">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/load.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="0" selection-start="107" selection-end="107" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="315">
@@ -778,7 +774,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/licenses.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="34" selection-start="435" selection-end="435" vertical-scroll-proportion="0.33112583" vertical-offset="0" max-vertical-offset="906">
+        <state line="20" column="34" selection-start="435" selection-end="435" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="85" selection-start="1092" selection-end="1170" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1095">
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/licensesIO.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="74" selection-start="2797" selection-end="2797" vertical-scroll-proportion="0.3642384" vertical-offset="945" max-vertical-offset="2310">
           <folding />
         </state>
       </provider>
