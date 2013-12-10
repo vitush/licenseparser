@@ -53,7 +53,7 @@
       <file leaf-file-name="manage.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/manage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="104" selection-start="2037" selection-end="2037" vertical-scroll-proportion="0.70434785" vertical-offset="450" max-vertical-offset="1140">
+            <state line="53" column="53" selection-start="1778" selection-end="1778" vertical-scroll-proportion="0.66086954" vertical-offset="415" max-vertical-offset="1140">
               <folding />
             </state>
           </provider>
@@ -657,7 +657,11 @@
       <created>1386681291076</created>
       <updated>1386681291076</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="fixed titles popup">
+      <created>1386691261490</created>
+      <updated>1386691261490</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -725,7 +729,8 @@
     <MESSAGE value="&#10;" />
     <MESSAGE value="&#10;q" />
     <MESSAGE value="added installation" />
-    <option name="LAST_COMMIT_MESSAGE" value="added installation" />
+    <MESSAGE value="fixed titles popup" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed titles popup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -851,7 +856,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/manage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="104" selection-start="2037" selection-end="2037" vertical-scroll-proportion="0.70434785" vertical-offset="450" max-vertical-offset="1140">
+        <state line="53" column="53" selection-start="1778" selection-end="1778" vertical-scroll-proportion="0.66086954" vertical-offset="415" max-vertical-offset="1140">
           <folding />
         </state>
       </provider>
