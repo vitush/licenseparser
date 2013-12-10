@@ -35,10 +35,8 @@ case "$1" in
         ;;
   status)
         pid=`ps ax | grep runserver  | grep -v grep | awk '{ print $1}'`
-        ps ax | grep runserver  | grep -v grep | awk '{ print $1}'
-        RETVAL=$?
-        [ $RETVAL -eq 0 ] && echo Process running with PID = $pid
-        [ $RETVAL -ne 0 ] && echo Process stopped
+        [ $pid -ne '' ] && echo Process running with PID = $pid
+        [ $pid -eq '' ] && echo Process stopped
 
         ;;
   reload|restart|status)
