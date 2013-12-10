@@ -23,13 +23,27 @@ case "$1" in
   stop)
         kill ` ps ax | grep runserver  | grep -v grep | awk '{ print $1}' `
         ;;
+  recreatedb)
+         rm ./database/licenses.db
+        $CMDDB
+        ;;
   createdb)
         $CMDDB
+        ;;
+  update)
+        git pull
+        ;;
+  status)
+        pid = `ps ax | grep runserver  | grep -v grep | awk '{ print $1}'`
+        RETVAL=$?
+        [ $RETVAL -eq 0 ] && echo Process running with PID = $pid
+        [ $RETVAL -ne 0 ] && echo Process stopped
+
         ;;
   reload|restart|status)
         ;;
   *)
-        echo "Usage: $0  {start|stop|createdb}" >&2
+        echo "Usage: $0  {start|stop|status|createdb|recreatedb|update}" >&2
         exit 1
         ;;
 esac
