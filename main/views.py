@@ -10,17 +10,25 @@ import csv
 from licenses import  settings
 
 def reload(request):
-    print("Reload")
-    licensesIO.LoadData()
+    c = {}
+    c.update(csrf(request))
+
+    progress = licensesIO.getProgress()
+    if progress == 100:
+        licensesIO.LoadData()
+    elif progress == 0:
+        licensesIO.LoadData()
     return HttpResponseRedirect("/load/")
+    #return render_to_response('load.html',c)
 
 def load(request):
     c = {}
     c.update(csrf(request))
     progress = licensesIO.getProgress()
-    print("Progress %s"%progress)
     c['progress_level'] = progress
     c['current_file'] = licensesIO.getCurrent()
+    c['last_sw'] = licensesIO.getlastSoftware()
+
     if progress == 100:
         return render_to_response('index.html',c)
     else:

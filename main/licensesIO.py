@@ -14,6 +14,7 @@ class myThread (threading.Thread):
         self.files_total = 0
         self.files_loaded = 0
         self.files_current = ''
+        self.last_software = ''
 
     def run(self):
         print "Starting " + self.name
@@ -59,6 +60,7 @@ class myThread (threading.Thread):
                     return False
 
                 sw = self.parse_software(node)
+                self.last_software = sw['name']
 
                 publisher, created = models.Publisher.objects.get_or_create(name=sw["publisher"])
                 if created:
@@ -71,9 +73,8 @@ class myThread (threading.Thread):
                                                 )
                 if created:
                     application.save()
-                #    print ("=> Found : (%s , %s) - New!"% (computer.name,sw["name"]))
-                #else:
-                #    print ("=> Found : (%s , %s)"% (computer.name,sw["name"]))
+
+                print ("=> Found : (%s , %s)"% (computer.name,sw["name"]))
 
                 computer.applications.add(application)
 
@@ -91,6 +92,8 @@ class myThread (threading.Thread):
             if element[0].firstChild is not None:
                 if element[0].firstChild.data is not None:
                      sw["version"] += element[0].firstChild.data
+                     sw["name"] += element[0].firstChild.data
+
 
         element = doc.getElementsByTagName('Publisher')
         if element is not None:
@@ -108,14 +111,24 @@ def LoadData():
     thread1.start()
 
 def getProgress():
+
     if thread1 is None:
         return 100
+
+    if thread1.files_total == 0:
+        return 100
+
     return int(float(thread1.files_loaded)/float(thread1.files_total)*100)
 
 def getCurrent():
     if thread1 is None:
         return ""
     return thread1.files_current
+
+def getlastSoftware():
+    if thread1 is None:
+        return ""
+    return thread1.last_software
 
 
 
