@@ -134,11 +134,7 @@ def manage(request):
 def write_pc(computer,writer):
         writer.writerow(['',''])
         writer.writerow(['',''])
-        writer.writerow(['',''])
         writer.writerow([computer])
-#        writer.writerow(['',''])
-#        writer.writerow(['','Software', 'Publisher', 'License', 'Cost'])
-#        writer.writerow(['',''])
 
         for app in computer.applications.all():
             publ = models.Publisher.objects.get(name=app.publisher)
@@ -153,6 +149,9 @@ def download(request):
         response = HttpResponse(content_type='text/csv')
         response['Content-Disposition'] = 'attachment; filename="software.csv"'
         writer = csv.writer(response)
+        writer.writerow(['',''])
+        writer.writerow(['Computer','Software', 'Publisher', 'License', 'Cost'])
+        writer.writerow(['',''])
 
         comp_id = request.POST['computer_id']
         if comp_id == "all" :
