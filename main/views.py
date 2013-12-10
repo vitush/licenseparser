@@ -93,7 +93,7 @@ def appinfo(request):
             application.comment = request.POST['comment']
             application.cost= request.POST['cost']
             application.save()
-            print(application.comment)
+
 
         c['app_id'] = application_id
         c['app_name'] = application.name
