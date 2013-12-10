@@ -98,11 +98,14 @@ def appinfo(request):
         application = models.Application.objects.get(id=application_id)
         publisher = models.Publisher.objects.get(name=application.publisher)
 
+
+
         c['app_name'] = application.name
         c['app_version'] = 0
         c['app_publisher'] = publisher.name
         c['app_license'] = application.get_license_txt()
         c['app_cost'] = 0
+
 
     return render_to_response('appinfo.html',c)
 

@@ -1,6 +1,18 @@
 {% extends "base.html" %}
 
+
+
+
 {% block page_content %}
+
+
+<style type="text/css">
+.appname
+{
+     width:600px !important;
+}
+</style>
+
 
     <h4>Application Info:</h4>
 
@@ -15,12 +27,22 @@
     </div>
 
     <div class="span3">
-        <input name="name"      readonly value="{{ app_name }}"><br><br>
+        <input name="name"      readonly value="{{ app_name }}" class="appname"><br><br>
         <input name="version"   readonly value="{{ app_version }}"><br><br>
         <input name="publisher" readonly value="{{ app_publisher }}"><br><br>
         <input name="license"   readonly value="{{ app_license }}"><br><br>
         <input name="cost"               value="{{ app_cost }}"><br><br>
+
+
+		<p>
+			PC list Software is installed on :&nbsp;
+            <select name="pclist" size="10"">
+                {% for sp in pclist%}
+                   <option value="{{pc.id}}" >{{pc.name}}</option>
+                {% endfor %}
+            </select>
     </div>
+
 
 </form>
 
