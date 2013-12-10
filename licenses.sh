@@ -18,7 +18,7 @@ set -e
 
 case "$1" in
   start)
-        $CMD  > /dev/null  2>&1  &
+        $CMD  > /tmp/licenses.log  2>&1  &
         ;;
   stop)
         kill ` ps ax | grep runserver  | grep -v grep | awk '{ print $1}' `
