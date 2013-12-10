@@ -66,7 +66,7 @@ def search(request):
 
         print (computer)
         for app in computer.applications.filter(publisher__in=publisher):
-            print ("  " + app.name)
+            print (u"  " + app.name)
 
         c['computer'] = computer
         c['computer_id'] = comp_id
