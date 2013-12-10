@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0390a5a0-99cb-4d99-9a99-40cbfe6dec10" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/appinfo.html" afterPath="$PROJECT_DIR$/templates/appinfo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/views.py" afterPath="$PROJECT_DIR$/main/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/start.sh" afterPath="$PROJECT_DIR$/start.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="a404b25d-6ec1-41eb-868f-7c8799b765b0" name="New changelist" comment="" />
@@ -58,10 +57,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="appinfo.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="appinfo.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/appinfo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="55" selection-start="993" selection-end="993" vertical-scroll-proportion="0.6802721" vertical-offset="0" max-vertical-offset="882">
+            <state line="40" column="55" selection-start="993" selection-end="993" vertical-scroll-proportion="-25.0" vertical-offset="0" max-vertical-offset="855">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="start.sh" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/start.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="906">
               <folding />
             </state>
           </provider>
@@ -126,12 +134,12 @@
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/licenses/urls.py" />
         <option value="$PROJECT_DIR$/templates/report_pc.html" />
-        <option value="$PROJECT_DIR$/start.sh" />
         <option value="$PROJECT_DIR$/main/licensesIO.py" />
         <option value="$PROJECT_DIR$/templates/load.html" />
         <option value="$PROJECT_DIR$/templates/manage.html" />
         <option value="$PROJECT_DIR$/main/views.py" />
         <option value="$PROJECT_DIR$/templates/appinfo.html" />
+        <option value="$PROJECT_DIR$/start.sh" />
       </list>
     </option>
   </component>
@@ -551,7 +559,11 @@
       <created>1386669039478</created>
       <updated>1386669039478</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Fixed  &#10;">
+      <created>1386673874011</created>
+      <updated>1386673874011</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -663,11 +675,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/start.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="12" selection-end="12" vertical-scroll-proportion="0.01655629" vertical-offset="0" max-vertical-offset="906" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/report_pc.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="0" selection-start="316" selection-end="316" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="810">
@@ -723,7 +730,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/appinfo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="55" selection-start="993" selection-end="993" vertical-scroll-proportion="0.6802721" vertical-offset="0" max-vertical-offset="882">
+        <state line="40" column="55" selection-start="993" selection-end="993" vertical-scroll-proportion="-25.0" vertical-offset="0" max-vertical-offset="855">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/start.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
           <folding />
         </state>
       </provider>
