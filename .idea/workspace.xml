@@ -33,7 +33,7 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="95" column="9" selection-start="2843" selection-end="2843" vertical-scroll-proportion="0.0" vertical-offset="1050" max-vertical-offset="2295">
+            <state line="95" column="9" selection-start="2843" selection-end="2843" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2295">
               <folding />
             </state>
           </provider>
@@ -102,7 +102,7 @@
       <file leaf-file-name="licensesIO.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/licensesIO.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="74" selection-start="2797" selection-end="2797" vertical-scroll-proportion="0.3642384" vertical-offset="945" max-vertical-offset="2310">
+            <state line="86" column="0" selection-start="2799" selection-end="2799" vertical-scroll-proportion="0.3807947" vertical-offset="945" max-vertical-offset="2355">
               <folding />
             </state>
           </provider>
@@ -601,7 +601,11 @@
       <created>1386677985337</created>
       <updated>1386677985337</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Unicode changes">
+      <created>1386678325003</created>
+      <updated>1386678325003</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -664,7 +668,8 @@
     <MESSAGE value="Fixed  &#10;" />
     <MESSAGE value="Added start-stop script" />
     <MESSAGE value="a" />
-    <option name="LAST_COMMIT_MESSAGE" value="a" />
+    <MESSAGE value="Unicode changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Unicode changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -751,13 +756,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="9" selection-start="2843" selection-end="2843" vertical-scroll-proportion="0.0" vertical-offset="1050" max-vertical-offset="2295">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/readme.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="8" selection-start="8" selection-end="8" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="906">
@@ -788,9 +786,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="9" selection-start="2843" selection-end="2843" vertical-scroll-proportion="0.0" vertical-offset="1050" max-vertical-offset="2295">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main/licensesIO.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="74" selection-start="2797" selection-end="2797" vertical-scroll-proportion="0.3642384" vertical-offset="945" max-vertical-offset="2310">
+        <state line="86" column="0" selection-start="2799" selection-end="2799" vertical-scroll-proportion="0.3807947" vertical-offset="945" max-vertical-offset="2355">
           <folding />
         </state>
       </provider>

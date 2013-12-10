@@ -83,7 +83,7 @@ class myThread (threading.Thread):
                 if created:
                     application.save()
 
-                print ("=> Found : (%s , %s)"% (computer.name,sw["name"]))
+                print (u"=> Found : (%s , %s)"% (computer.name,sw["name"]))
 
                 computer.applications.add(application)
 
@@ -94,14 +94,16 @@ class myThread (threading.Thread):
         if element is not None :
             if element[0].firstChild is not None:
                 if element[0].firstChild.data is not None:
-                     name = unicodedata.normalize('NFKD', element[0].firstChild.data).encode('ascii','ignore')
+                     name = element[0].firstChild.data
+                     #name = unicodedata.normalize('NFKD', element[0].firstChild.data).encode('ascii','ignore')
                      sw["name"] = name
 
         element = doc.getElementsByTagName('DisplayVersion')
         if element is not None :
             if element[0].firstChild is not None:
                 if element[0].firstChild.data is not None:
-                     ver = unicodedata.normalize('NFKD', element[0].firstChild.data).encode('ascii','ignore')
+                     ver = element[0].firstChild.data
+                     #ver = unicodedata.normalize('NFKD', element[0].firstChild.data).encode('ascii','ignore')
                      sw["version"] += ver
                      sw["name"] += " - "
                      sw["name"] += ver
@@ -111,7 +113,8 @@ class myThread (threading.Thread):
         if element is not None:
             if element[0].firstChild is not None:
                 if element[0].firstChild.data is not None:
-                     pub = unicodedata.normalize('NFKD', element[0].firstChild.data).encode('ascii','ignore')
+                     pub = element[0].firstChild.data
+                     #pub = unicodedata.normalize('NFKD', element[0].firstChild.data).encode('ascii','ignore')
                      sw["publisher"] = pub
         return sw
 
