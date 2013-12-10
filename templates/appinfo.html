@@ -15,48 +15,52 @@
 
 
     <h4>Application Info:</h4>
+    <div class="span8">
 
-    <form action="/appinfo/" method="post" name="save"> {% csrf_token %}
+        <form action="/appinfo/" method="post" name="save"> {% csrf_token %}
 
-        <input name="software" value="{{ app_id }}" type="hidden" >
+            <input name="software" value="{{ app_id }}" type="hidden" >
 
-    <div class="span1">
-        Name: <br><br>
-        Version: <br><br>
-        Publisher: <br><br>
-        License Type: <br><br>
-        Cost: <br><br>
-        Installation: <br><br>
-
-
-    </div>
-
-    <div class="span3">
-        <input name="name"      readonly value="{{ app_name }}" class="appname"><br><br>
-        <input name="version"   readonly value="{{ app_version }}" class="appname"><br><br>
-        <input name="publisher" readonly value="{{ app_publisher }}" class="appname"><br><br>
-        <input name="license"   readonly value="{{ app_license }}" class="appname"><br><br>
-        <input name="cost"               value="{{ app_cost }}" class="appname"><br><br>
-        <input name="installation" readonly value="{{ app_installation }}" class="appname" ><br><br>
-
-        <p> Comment:&nbsp;
-            <textarea type="text" cols="20" name="comment">{{ app_comment }}</textarea>
-            <input type="submit" value="save" name="action" >
-        </p>
-        <p>Installed on :&nbsp;
-            <select name="pclist" size="10"">
-                {% for pc in pclist %}
-                   <option value="{{pc.id}}" >{{pc.name}}</option>
-                {% endfor %}
-            </select>
-        </p>
+        <div class="span1">
+            Name: <br><br>
+            Version: <br><br>
+            Publisher: <br><br>
+            License Type: <br><br>
+            Cost: <br><br>
+            Installation: <br><br>
 
 
+        </div>
+
+        <div class="span3">
+            <input name="name"      readonly value="{{ app_name }}" class="appname"><br><br>
+            <input name="version"   readonly value="{{ app_version }}" class="appname"><br><br>
+            <input name="publisher" readonly value="{{ app_publisher }}" class="appname"><br><br>
+            <input name="license"   readonly value="{{ app_license }}" class="appname"><br><br>
+            <input name="cost"               value="{{ app_cost }}" class="appname"><br><br>
+            <input name="installation" readonly value="{{ app_installation }}" class="appname" ><br><br>
+
+        </div>
+        </form>
 
     </div>
+    <div class="span4">
 
+            <p> Comment:&nbsp;<br>
+                <textarea type="text" cols="40" name="comment">{{ app_comment }}</textarea>
+            </p>
+            <p> Installed on :&nbsp; <br>
+                <select name="pclist" size="10"">
+                    {% for pc in pclist %}
+                       <option value="{{pc.id}}" >{{pc.name}}</option>
+                    {% endfor %}
+                </select>
+            </p>
+            <p>
+                <input type="submit" value="save" name="action" >
+            </p>
 
-</form>
+    </div>
 
 
 {% endblock %}

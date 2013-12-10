@@ -93,6 +93,7 @@ def appinfo(request):
             application.comment = request.POST['comment']
             application.cost= request.POST['cost']
             application.save()
+            return HttpResponseRedirect("/manage/")
 
 
         c['app_id'] = application_id
