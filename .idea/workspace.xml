@@ -665,7 +665,11 @@
       <created>1386692891427</created>
       <updated>1386692891427</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="fix">
+      <created>1386693204545</created>
+      <updated>1386693204545</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -735,7 +739,8 @@
     <MESSAGE value="added installation" />
     <MESSAGE value="fixed titles popup" />
     <MESSAGE value="add numbers" />
-    <option name="LAST_COMMIT_MESSAGE" value="add numbers" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
