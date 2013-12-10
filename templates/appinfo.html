@@ -35,12 +35,14 @@
 
 
 		<p>
-			PC list Software is installed on :&nbsp;
+			Installed on :&nbsp;
             <select name="pclist" size="10"">
-                {% for sp in pclist%}
+                {% for pc in pclist %}
                    <option value="{{pc.id}}" >{{pc.name}}</option>
                 {% endfor %}
             </select>
+
+
     </div>
 
 

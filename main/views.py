@@ -84,28 +84,23 @@ def appinfo(request):
     c = {}
     c.update(csrf(request))
 
-    print("App ID ")
-    if request.method == 'POST':
-        print("Post")
-    if request.method == 'GET':
-        print("Get")
-
     if request.method == 'POST':
         application_id = request.POST['software']
 
-        print("App ID %s"%application_id)
 
         application = models.Application.objects.get(id=application_id)
         publisher = models.Publisher.objects.get(name=application.publisher)
 
-
+        #pclist = []
+        #for pc in application.computer_set.all():
+        #    pclist.append(pc.name)
 
         c['app_name'] = application.name
         c['app_version'] = 0
         c['app_publisher'] = publisher.name
         c['app_license'] = application.get_license_txt()
         c['app_cost'] = 0
-
+        c['pclist'] = application.computer_set.all()
 
     return render_to_response('appinfo.html',c)
 

@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0390a5a0-99cb-4d99-9a99-40cbfe6dec10" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/appinfo.html" afterPath="$PROJECT_DIR$/templates/appinfo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/manage.html" afterPath="$PROJECT_DIR$/templates/manage.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/views.py" afterPath="$PROJECT_DIR$/main/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -35,7 +34,7 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="0" selection-start="2656" selection-end="2656" vertical-scroll-proportion="0.0" vertical-offset="945" max-vertical-offset="2370">
+            <state line="95" column="9" selection-start="2843" selection-end="2843" vertical-scroll-proportion="0.0" vertical-offset="1050" max-vertical-offset="2295">
               <folding />
             </state>
           </provider>
@@ -44,28 +43,26 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="23" selection-start="1240" selection-end="1255" vertical-scroll-proportion="0.0" vertical-offset="159" max-vertical-offset="1065">
+            <state line="38" column="0" selection-start="997" selection-end="997" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="1065">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manage.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="manage.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/manage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="103" selection-start="742" selection-end="742" vertical-scroll-proportion="0.28911564" vertical-offset="135" max-vertical-offset="1140">
+            <state line="26" column="103" selection-start="742" selection-end="742" vertical-scroll-proportion="-10.625" vertical-offset="135" max-vertical-offset="1140">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="appinfo.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="appinfo.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/appinfo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="0" selection-start="821" selection-end="821" vertical-scroll-proportion="-21.25" vertical-offset="0" max-vertical-offset="825">
-              <folding>
-                <marker date="1386668837944" expanded="true" signature="935:1052" placeholder="{% for sp in pclist... %}" />
-              </folding>
+            <state line="40" column="55" selection-start="993" selection-end="993" vertical-scroll-proportion="0.6802721" vertical-offset="0" max-vertical-offset="882">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -74,7 +71,11 @@
         <entry file="file://$PROJECT_DIR$/templates/load.html">
           <provider selected="true" editor-type-id="text-editor">
             <state line="5" column="0" selection-start="107" selection-end="107" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="315">
-              <folding />
+              <folding>
+                <marker date="1386666456981" expanded="true" signature="158:237" placeholder="..." />
+                <marker date="1386666456981" expanded="true" signature="190:219" placeholder="..." />
+                <marker date="1386666456981" expanded="true" signature="247:384" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -91,7 +92,7 @@
       <file leaf-file-name="licensesIO.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/licensesIO.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="0" selection-start="1390" selection-end="1390" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="2250">
+            <state line="51" column="0" selection-start="1390" selection-end="1390" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="2250">
               <folding />
             </state>
           </provider>
@@ -128,9 +129,9 @@
         <option value="$PROJECT_DIR$/start.sh" />
         <option value="$PROJECT_DIR$/main/licensesIO.py" />
         <option value="$PROJECT_DIR$/templates/load.html" />
-        <option value="$PROJECT_DIR$/templates/appinfo.html" />
-        <option value="$PROJECT_DIR$/main/views.py" />
         <option value="$PROJECT_DIR$/templates/manage.html" />
+        <option value="$PROJECT_DIR$/main/views.py" />
+        <option value="$PROJECT_DIR$/templates/appinfo.html" />
       </list>
     </option>
   </component>
@@ -546,7 +547,11 @@
       <created>1386667956090</created>
       <updated>1386667956090</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Fixed  &#10;">
+      <created>1386669039478</created>
+      <updated>1386669039478</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -606,7 +611,8 @@
     <MESSAGE value="fixed download&#10;" />
     <MESSAGE value="fix reload , added version to app name &#10;" />
     <MESSAGE value="Fixed unknown PC owner&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed unknown PC owner&#10;" />
+    <MESSAGE value="Fixed  &#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed  &#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -662,16 +668,16 @@
         <state line="1" column="0" selection-start="12" selection-end="12" vertical-scroll-proportion="0.01655629" vertical-offset="0" max-vertical-offset="906" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/load.html">
+    <entry file="file://$PROJECT_DIR$/templates/report_pc.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="107" selection-end="107" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="315">
+        <state line="13" column="0" selection-start="316" selection-end="316" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="810">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/report_pc.html">
+    <entry file="file://$PROJECT_DIR$/templates/manage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="316" selection-end="316" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="810">
+        <state line="26" column="103" selection-start="742" selection-end="742" vertical-scroll-proportion="-10.625" vertical-offset="135" max-vertical-offset="1140">
           <folding />
         </state>
       </provider>
@@ -683,18 +689,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/appinfo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="0" selection-start="821" selection-end="821" vertical-scroll-proportion="-21.25" vertical-offset="0" max-vertical-offset="825">
-          <folding>
-            <marker date="1386668837944" expanded="true" signature="935:1052" placeholder="{% for sp in pclist... %}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="23" selection-start="1240" selection-end="1255" vertical-scroll-proportion="0.0" vertical-offset="201" max-vertical-offset="1065">
+        <state line="38" column="0" selection-start="997" selection-end="997" vertical-scroll-proportion="0.0" vertical-offset="159" max-vertical-offset="1065">
           <folding />
         </state>
       </provider>
@@ -706,16 +703,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/load.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="107" selection-end="107" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="315">
+          <folding>
+            <marker date="1386666456981" expanded="true" signature="158:237" placeholder="..." />
+            <marker date="1386666456981" expanded="true" signature="190:219" placeholder="..." />
+            <marker date="1386666456981" expanded="true" signature="247:384" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="0" selection-start="2656" selection-end="2656" vertical-scroll-proportion="0.0" vertical-offset="945" max-vertical-offset="2370">
+        <state line="95" column="9" selection-start="2843" selection-end="2843" vertical-scroll-proportion="0.0" vertical-offset="1050" max-vertical-offset="2295">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/manage.html">
+    <entry file="file://$PROJECT_DIR$/templates/appinfo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="103" selection-start="742" selection-end="742" vertical-scroll-proportion="0.28911564" vertical-offset="135" max-vertical-offset="1140">
+        <state line="40" column="55" selection-start="993" selection-end="993" vertical-scroll-proportion="0.6802721" vertical-offset="0" max-vertical-offset="882">
           <folding />
         </state>
       </provider>
