@@ -92,6 +92,7 @@ class myThread (threading.Thread):
             if element[0].firstChild is not None:
                 if element[0].firstChild.data is not None:
                      sw["version"] += element[0].firstChild.data
+                     sw["name"] += " - "
                      sw["name"] += element[0].firstChild.data
 
 
