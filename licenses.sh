@@ -35,8 +35,8 @@ case "$1" in
         ;;
   status)
         pid=`ps ax | grep runserver  | grep -v grep | awk '{ print $1}'`
-        [ "x$pid" -ne "x" ] && echo Process running with PID = $pid
-        [ "x$pid" -eq "x" ] && echo Process stopped
+        [ "x$pid" != "x" ] && echo Process running with PID = $pid
+        [ "x$pid" == "x" ] && echo Process stopped
 
         ;;
   reload|restart|status)

@@ -19,7 +19,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
+    <option name="PATCH_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
@@ -71,7 +71,7 @@
       <file leaf-file-name="licenses.sh" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/licenses.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="12" selection-start="864" selection-end="864" vertical-scroll-proportion="0.8747913" vertical-offset="46" max-vertical-offset="795">
+            <state line="37" column="20" selection-start="804" selection-end="804" vertical-scroll-proportion="0.84974957" vertical-offset="46" max-vertical-offset="795">
               <folding />
             </state>
           </provider>
@@ -637,7 +637,11 @@
       <created>1386680016259</created>
       <updated>1386680016259</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="added status check">
+      <created>1386680086455</created>
+      <updated>1386680086455</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -828,7 +832,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/licenses.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="12" selection-start="864" selection-end="864" vertical-scroll-proportion="0.8747913" vertical-offset="46" max-vertical-offset="795">
+        <state line="37" column="20" selection-start="804" selection-end="804" vertical-scroll-proportion="0.84974957" vertical-offset="46" max-vertical-offset="795">
           <folding />
         </state>
       </provider>
