@@ -96,7 +96,7 @@ class myThread (threading.Thread):
                 if element[0].firstChild.data is not None:
                      name = element[0].firstChild.data
                      #name = unicodedata.normalize('NFKD', element[0].firstChild.data).encode('ascii','ignore')
-                     sw["name"] = name
+                     sw["name"] = element[0].firstChild.data
 
         element = doc.getElementsByTagName('DisplayVersion')
         if element is not None :
@@ -104,9 +104,9 @@ class myThread (threading.Thread):
                 if element[0].firstChild.data is not None:
                      ver = element[0].firstChild.data
                      #ver = unicodedata.normalize('NFKD', element[0].firstChild.data).encode('ascii','ignore')
-                     sw["version"] += ver
+                     sw["version"] += element[0].firstChild.data
                      sw["name"] += " - "
-                     sw["name"] += ver
+                     sw["name"] += element[0].firstChild.data
 
 
         element = doc.getElementsByTagName('Publisher')
@@ -115,7 +115,7 @@ class myThread (threading.Thread):
                 if element[0].firstChild.data is not None:
                      pub = element[0].firstChild.data
                      #pub = unicodedata.normalize('NFKD', element[0].firstChild.data).encode('ascii','ignore')
-                     sw["publisher"] = pub
+                     sw["publisher"] = element[0].firstChild.data
         return sw
 
 
