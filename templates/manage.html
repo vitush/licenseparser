@@ -40,7 +40,7 @@
         <form id="free_software_id" action="/manage/" method="post">  {% csrf_token %}
             <select name="software" multiple="true" size="10" title="Unknown license type" class="selectwidthauto">
                 {% for sw in free_software %}
-                   <option value="{{sw.id}}" ondblclick="swinfo('free_software_id');">{{sw}}</option>
+                   <option value="{{sw.id}}" ondblclick="swinfo('free_software_id');" title="{{sw}}" >{{sw}}</option>
                 {% endfor %}
             </select>
         <p>
@@ -55,7 +55,7 @@
         <form id="licensed_software_id"  action="/manage/" method="post">  {% csrf_token %}
             <select name="software" multiple="true" size="10" title="Need License" class="selectwidthauto">
                 {% for sw in licensed_software %}
-                   <option value="{{sw.id}}" ondblclick="swinfo('licensed_software_id');" >{{sw}}</option>
+                   <option value="{{sw.id}}" ondblclick="swinfo('licensed_software_id');" title="{{sw}}" >{{sw}}</option>
                 {% endfor %}
             </select>
 
