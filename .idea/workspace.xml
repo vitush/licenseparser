@@ -69,7 +69,7 @@
       <file leaf-file-name="licenses.sh" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/licenses.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="30" selection-start="397" selection-end="397" vertical-scroll-proportion="0.31456953" vertical-offset="0" max-vertical-offset="906">
+            <state line="32" column="14" selection-start="683" selection-end="683" vertical-scroll-proportion="0.5298013" vertical-offset="0" max-vertical-offset="906">
               <folding />
             </state>
           </provider>
@@ -575,7 +575,11 @@
       <created>1386674553841</created>
       <updated>1386674553841</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="a">
+      <created>1386674646646</created>
+      <updated>1386674646646</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -751,7 +755,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/licenses.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="30" selection-start="397" selection-end="397" vertical-scroll-proportion="0.31456953" vertical-offset="0" max-vertical-offset="906">
+        <state line="32" column="14" selection-start="683" selection-end="683" vertical-scroll-proportion="0.5298013" vertical-offset="0" max-vertical-offset="906">
           <folding />
         </state>
       </provider>

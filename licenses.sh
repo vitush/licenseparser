@@ -12,6 +12,7 @@
 ### END INIT INFO
 
 CMD='python ./manage.py runserver 0.0.0.0:8000'
+CMDDB='python ./manage.py syncdb'
 
 set -e
 
@@ -21,12 +22,14 @@ case "$1" in
         ;;
   stop)
         kill ` ps ax | grep runserver  | grep -v grep | awk '{ print $1}' `
-
         ;;
-  reload|restart|force-reload|status)
+  createdb)
+        $CMDDB
+        ;;
+  reload|restart|status)
         ;;
   *)
-        echo "Usage: $0  {start|stop|restart|force-reload|status}" >&2
+        echo "Usage: $0  {start|stop|createdb}" >&2
         exit 1
         ;;
 esac
