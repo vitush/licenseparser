@@ -131,6 +131,18 @@ def manage(request):
     c['licensed_software'] = models.Application.objects.filter(license=2)
     return render_to_response('manage.html',c)
 
+def write_pc(computer,writer):
+        writer.writerow(['',''])
+        writer.writerow(['',''])
+        writer.writerow(['',''])
+        writer.writerow([computer])
+#        writer.writerow(['',''])
+#        writer.writerow(['','Software', 'Publisher', 'License', 'Cost'])
+#        writer.writerow(['',''])
+
+        for app in computer.applications.all():
+            publ = models.Publisher.objects.get(name=app.publisher)
+            writer.writerow(['',app.get_name(),publ.get_publisher(),app.get_license_txt(),str(app.get_cost())])
 
 def download(request):
     c = {}
@@ -138,22 +150,18 @@ def download(request):
 
 
     if request.method == 'POST':
-
         response = HttpResponse(content_type='text/csv')
         response['Content-Disposition'] = 'attachment; filename="software.csv"'
+        writer = csv.writer(response)
 
         comp_id = request.POST['computer_id']
-        computer = models.Computer.objects.get(id=comp_id)
+        if comp_id == "all" :
+            for pc in models.Computer.objects.all():
+                write_pc(pc,writer)
 
-        writer = csv.writer(response)
-        writer.writerow(['Computer :', computer])
-        writer.writerow(['',''])
-        writer.writerow(['Software', 'Publisher', 'License'])
-        writer.writerow(['',''])
+        else :
+            computer = models.Computer.objects.get(id=comp_id)
+            write_pc(computer,writer)
 
-        for app in computer.applications.all():
-            print ("  " + app.name)
-            publ = models.Publisher.objects.get(name=app.publisher)
-            writer.writerow([app.get_name(),publ.get_publisher(),app.get_license_txt()])
 
     return response

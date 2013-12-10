@@ -38,7 +38,7 @@ class Application(models.Model):
         return str(self.version)
 
     def get_cost(self):
-        return str(self.version)
+        return self.cost
 
     def get_publisher(self):
         return unicodedata.normalize('NFKD', self.publisher).encode('ascii','ignore')
