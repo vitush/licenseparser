@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0390a5a0-99cb-4d99-9a99-40cbfe6dec10" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/manage.html" afterPath="$PROJECT_DIR$/templates/manage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/report_pc.html" afterPath="$PROJECT_DIR$/templates/report_pc.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="a404b25d-6ec1-41eb-868f-7c8799b765b0" name="New changelist" comment="" />
@@ -48,10 +49,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manage.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="manage.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/manage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="8" selection-start="330" selection-end="330" vertical-scroll-proportion="0.4695652" vertical-offset="0" max-vertical-offset="1140">
+            <state line="16" column="28" selection-start="296" selection-end="319" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="1140">
               <folding />
             </state>
           </provider>
@@ -60,16 +61,16 @@
       <file leaf-file-name="report_pc.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/report_pc.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="122" selection-start="1790" selection-end="1790" vertical-scroll-proportion="-28.75" vertical-offset="30" max-vertical-offset="915">
+            <state line="7" column="28" selection-start="124" selection-end="124" vertical-scroll-proportion="-3.125" vertical-offset="30" max-vertical-offset="915">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="appinfo.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="appinfo.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/appinfo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="16" selection-start="1752" selection-end="1752" vertical-scroll-proportion="-17.083334" vertical-offset="490" max-vertical-offset="1125">
+            <state line="8" column="23" selection-start="148" selection-end="148" vertical-scroll-proportion="0.20869565" vertical-offset="0" max-vertical-offset="1125">
               <folding />
             </state>
           </provider>
@@ -147,8 +148,8 @@
         <option value="$PROJECT_DIR$/main/views.py" />
         <option value="$PROJECT_DIR$/templates/appinfo.html" />
         <option value="$PROJECT_DIR$/main/licensesIO.py" />
-        <option value="$PROJECT_DIR$/templates/report_pc.html" />
         <option value="$PROJECT_DIR$/templates/manage.html" />
+        <option value="$PROJECT_DIR$/templates/report_pc.html" />
       </list>
     </option>
   </component>
@@ -736,7 +737,11 @@
       <created>1386761318832</created>
       <updated>1386761318832</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="w">
+      <created>1386761401454</created>
+      <updated>1386761401454</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -903,13 +908,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/appinfo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="16" selection-start="1752" selection-end="1752" vertical-scroll-proportion="-17.083334" vertical-offset="490" max-vertical-offset="1125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/licensesIO.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="114" column="0" selection-start="4148" selection-end="4148" vertical-scroll-proportion="0.0" vertical-offset="1336" max-vertical-offset="2535">
@@ -917,16 +915,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/report_pc.html">
+    <entry file="file://$PROJECT_DIR$/templates/manage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="122" selection-start="1790" selection-end="1790" vertical-scroll-proportion="-28.75" vertical-offset="30" max-vertical-offset="915">
+        <state line="16" column="28" selection-start="296" selection-end="319" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="1140">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/manage.html">
+    <entry file="file://$PROJECT_DIR$/templates/report_pc.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="8" selection-start="330" selection-end="330" vertical-scroll-proportion="0.4695652" vertical-offset="0" max-vertical-offset="1140">
+        <state line="7" column="28" selection-start="124" selection-end="124" vertical-scroll-proportion="-3.125" vertical-offset="30" max-vertical-offset="915">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/appinfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="23" selection-start="148" selection-end="148" vertical-scroll-proportion="0.20869565" vertical-offset="0" max-vertical-offset="1125">
           <folding />
         </state>
       </provider>
