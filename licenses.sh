@@ -31,8 +31,12 @@ case "$1" in
   stop)
         kill ` ps ax | grep runserver  | grep -v grep | awk '{ print $1}' `
         ;;
+  restart)
+        $0 stop
+        $0 start
+        ;;
   recreatedb)
-         rm ./database/licenses.db
+        rm ./database/licenses.db
         $CMDDB
         ;;
   createdb)
@@ -50,7 +54,7 @@ case "$1" in
   reload|restart|status)
         ;;
   *)
-        echo "Usage: $0  {start|stop|status|createdb|recreatedb|update}" >&2
+        echo "Usage: $0  {start|stop|restart|status|createdb|recreatedb|update}" >&2
         exit 1
         ;;
 esac
