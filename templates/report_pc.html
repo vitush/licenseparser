@@ -23,7 +23,7 @@
         <form action="/report_pc/" method="post">  {% csrf_token %}
             <select name="software" multiple="true" size="10" title="Unknown license type" class="selectwidthauto">
                 {% for sw in unknown_software %}
-                   <option value="{{sw.id}}" ondblclick="swinfo('unknown_software_id');"  title="{{sw}}">{{sw}}</option>
+                   <option value="{{sw.id}}" ondblclick="swinfo('unknown_software_id');"  title="{{sw}} ({{sw.publisher}})" >{{sw}}</option>
                 {% endfor %}
             </select>
         </form>
@@ -35,7 +35,7 @@
         <form action="/report_pc/" method="post">  {% csrf_token %}
             <select name="software" multiple="true" size="10" title="Unknown license type" class="selectwidthauto">
                 {% for sw in free_software %}
-                   <option value="{{sw.id}}" ondblclick="swinfo('unknown_software_id');"  title="{{sw}}">{{sw}}</option>
+                   <option value="{{sw.id}}" ondblclick="swinfo('unknown_software_id');"  title="{{sw}} ({{sw.publisher}})">{{sw}}</option>
                 {% endfor %}
             </select>
         </form>
@@ -46,7 +46,7 @@
         <form action="/report_pc/" method="post">  {% csrf_token %}
             <select name="software" multiple="true" size="10" title="Need License" class="selectwidthauto">
                 {% for sw in licensed_software %}
-                   <option value="{{sw.id}}" ondblclick="swinfo('unknown_software_id');"  title="{{sw}}">{{sw}}</option>
+                   <option value="{{sw.id}}" ondblclick="swinfo('unknown_software_id');"  title="{{sw}} ({{sw.publisher}})">{{sw}}</option>
                 {% endfor %}
             </select>
         </form>
