@@ -63,6 +63,7 @@
     </div>
 </form>
 <form id="unknown_software_id"  action="/manage/" method="post">  {% csrf_token %}
+      <input name="software" value="{{ app_id }}" type="hidden" >
     <input name="action" type="submit" value="Mark Free"  />
     <input name="action" type="submit" value="Mark Licensed" />
 </form>
