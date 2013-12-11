@@ -112,7 +112,7 @@ class myThread (threading.Thread):
                      sw["version"] = element[0].firstChild.data
                      sw["name"] += " - "
                      sw["name"] += element[0].firstChild.data
-                     sw["name"] += "("
+                     sw["name"] += " ("
                      sw["name"] += sw['publisher']
                      sw["name"] += ")"
 
