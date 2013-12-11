@@ -92,7 +92,7 @@ def appinfo(request):
         if act == "save":
             application.comment = request.POST['comment']
             application.cost= request.POST['cost']
-            if application.cost > 0:
+            if int(application.cost) > 0:
                 application.license = 2
             application.save()
             return HttpResponseRedirect("/manage/")
