@@ -32,8 +32,8 @@ case "$1" in
         kill ` ps ax | grep runserver  | grep -v grep | awk '{ print $1}' `
         ;;
   restart)
-        $0 stop
-        $0 start
+        sh ./$0 stop
+        sh ./$0 start
         ;;
   recreatedb)
         rm ./database/licenses.db

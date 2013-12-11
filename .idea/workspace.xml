@@ -4,7 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/templates/load.html" line="15" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0390a5a0-99cb-4d99-9a99-40cbfe6dec10" name="Default" comment="w">
+    <list default="true" id="0390a5a0-99cb-4d99-9a99-40cbfe6dec10" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/licenses.sh" afterPath="$PROJECT_DIR$/licenses.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -78,7 +78,7 @@
       <file leaf-file-name="licenses.sh" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/licenses.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="16" selection-start="820" selection-end="820" vertical-scroll-proportion="0.48580968" vertical-offset="234" max-vertical-offset="975">
+            <state line="35" column="13" selection-start="822" selection-end="822" vertical-scroll-proportion="0.48580968" vertical-offset="234" max-vertical-offset="975">
               <folding />
             </state>
           </provider>
@@ -744,7 +744,11 @@
       <created>1386761586784</created>
       <updated>1386761586784</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="w">
+      <created>1386761747296</created>
+      <updated>1386761747296</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -934,7 +938,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/licenses.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="16" selection-start="820" selection-end="820" vertical-scroll-proportion="0.48580968" vertical-offset="234" max-vertical-offset="975">
+        <state line="35" column="13" selection-start="822" selection-end="822" vertical-scroll-proportion="0.48580968" vertical-offset="234" max-vertical-offset="975">
           <folding />
         </state>
       </provider>
