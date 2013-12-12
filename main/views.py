@@ -88,14 +88,14 @@ def appinfo(request):
         publisher = models.Publisher.objects.get(name=application.publisher)
 
         # Save Data
-        act = request.POST.get('action', None)
-        if act == "save":
-            application.comment = request.POST['comment']
-            application.cost= request.POST['cost']
-            if int(application.cost) > 0:
-                application.license = 2
-            application.save()
-            return HttpResponseRedirect("/manage/")
+        #act = request.POST.get('action', None)
+        #if act == "save":
+        #    application.comment = request.POST['comment']
+        #    application.cost= request.POST['cost']
+        #    if int(application.cost) > 0:
+        #        application.license = 2
+        #    application.save()
+        #    return HttpResponseRedirect("/manage/")
 
 
         c['app_id'] = application_id
@@ -119,14 +119,22 @@ def manage(request):
         action = request.POST['action']
         sw_list = request.POST.getlist('software')
 
+        new_comment = request.POST.get('comment', None)
+        new_cost = request.POST.get('cost', None)
+
         actions = {"Mark Free":1,"Mark Licensed":2,"Mark Unknown":0}
 
         for sw_id in sw_list:
             apps = models.Application.objects.filter(id=sw_id)
             for app in apps:
                 app.license = actions[action]
+                if new_comment  is not None:
+                    app.comment = new_comment
+                if app.license == 1 :
+                    app.cost = 0
+                elif new_cost is not None:
+                    app.cost = new_cost
                 app.save()
-
 
     c['unknown_software'] = models.Application.objects.filter(license=0)
     c['free_software'] = models.Application.objects.filter(license=1)
