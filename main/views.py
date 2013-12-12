@@ -97,7 +97,7 @@ def appinfo(request):
         import re
         name_full = application.name
 
-        name_full="Windows Support Tools - 2  - 5.2.3790.3959"
+        name_full=application.name
         name_list = name_full.split("-")[:-1]
         name_short = "-".join(name_list)
 
