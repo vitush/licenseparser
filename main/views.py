@@ -106,7 +106,7 @@ def appinfo(request):
             name_list = name_list[:-1]
             name_list = name_full.split("-")[:-1]
             name_short = "-".join(name_list)
-            name_short_vendor name_short
+            name_short_vendor= name_short
             if publisher.name != "Unknown" :
                 name_short_vendor += " "
                 name_short_vendor += publisher.name

@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0390a5a0-99cb-4d99-9a99-40cbfe6dec10" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/appinfo.html" afterPath="$PROJECT_DIR$/templates/appinfo.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/views.py" afterPath="$PROJECT_DIR$/main/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -34,7 +33,7 @@
       <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="47" selection-start="3698" selection-end="3698" vertical-scroll-proportion="0.6302521" vertical-offset="1260" max-vertical-offset="2850">
+            <state line="108" column="31" selection-start="3382" selection-end="3382" vertical-scroll-proportion="0.40336135" vertical-offset="1260" max-vertical-offset="2850">
               <folding />
             </state>
           </provider>
@@ -799,7 +798,11 @@
       <created>1386860769588</created>
       <updated>1386860769588</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="added softpedia">
+      <created>1386867328213</created>
+      <updated>1386867328214</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -876,7 +879,8 @@
     <MESSAGE value="changed buttom position" />
     <MESSAGE value="added search" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="added softpedia" />
+    <option name="LAST_COMMIT_MESSAGE" value="added softpedia" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -988,7 +992,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="47" selection-start="3698" selection-end="3698" vertical-scroll-proportion="0.6302521" vertical-offset="1260" max-vertical-offset="2850">
+        <state line="108" column="31" selection-start="3382" selection-end="3382" vertical-scroll-proportion="0.40336135" vertical-offset="1260" max-vertical-offset="2850">
           <folding />
         </state>
       </provider>
