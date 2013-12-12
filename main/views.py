@@ -99,8 +99,8 @@ def appinfo(request):
 
         name_full=application.name
         name_short = application.name
-        name_list = name_full.split("-")
         name_short_vendor = application.name
+        name_list = name_full.split("-")
 
         if len(name_list) > 1:
             name_list = name_list[:-1]
@@ -115,7 +115,7 @@ def appinfo(request):
         c['app_id'] = application_id
         c['app_name'] = application.name
         c['app_name_short'] = name_short
-        c['app_name_short'] = name_short_vendor
+        c['app_name_short_vendor'] = name_short_vendor
         c['app_version'] = application.version
         c['app_publisher'] = publisher.name
         c['app_license'] = application.get_license_txt()
