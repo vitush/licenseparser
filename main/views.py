@@ -131,6 +131,8 @@ def manage(request):
     c = {}
     c.update(csrf(request))
 
+    print("Manage")
+
     if request.method == 'POST':
         action = request.POST['action']
         sw_list = request.POST.getlist('software')

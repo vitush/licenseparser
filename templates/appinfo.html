@@ -4,7 +4,24 @@
 
 
 {% block page_content %}
-<form action="/manage/" method="post" name="save"> {% csrf_token %}
+
+
+<script>
+
+
+        function softpedia() {
+
+            document.getElementById('comment').value = "http://www.softpedia.com/dyn-search.php?search_term={{ app_name_short }}";
+            document.getElementById('action_id').name = "action";
+            document.getElementById('action_id').value = "Mark Free";
+            document.getElementById("saveapp").submit();
+
+        }
+
+</script>
+
+
+<form id="saveapp" action="/manage/" method="post" name="save"> {% csrf_token %}
 <input name="software" value="{{ app_id }}" type="hidden" >
 
 <style type="text/css">
@@ -13,6 +30,7 @@
      width:600px !important;
 }
 </style>
+
 
 
     <h4>Application Info:</h4>
@@ -37,7 +55,7 @@
         <div class="span3">
             <input name="name"      readonly value="{{ app_name }}" class="appname">
                <a href="http://google.com/search?q={{ app_name_short_vendor}}" target="_blank">Search on Google</a>  |
-               <a href="http://www.softpedia.com/dyn-search.php?search_term={{ app_name_short }}" target="_blank">Search on Softpedia</a>
+               <a id="softpedia_url" href="http://www.softpedia.com/dyn-search.php?search_term={{ app_name_short }}" target="_blank">Search on Softpedia</a>
 
                 <br><br>
             <input name="version"   readonly value="{{ app_version }}" class="appname"><br><br>
@@ -47,11 +65,14 @@
             <input name="installation" readonly value="{{ app_installation }}" class="appname" ><br><br>
 
             <p> Comment:&nbsp;<br>
-                <textarea type="text" cols="40" name="comment">{{ app_comment }}</textarea>
+                <textarea  id="comment"  type="text" cols="40" name="comment">{{ app_comment }}</textarea>
             </p>
                <p>
                 <input name="action" type="submit" value="Mark Free"  />
                 <input name="action" type="submit" value="Mark Licensed" />
+                <input  type="button" onclick="softpedia();" value="Mark as Free with Softpedia URL " />
+                <input  type="hidden" id="action_id" name="action1" value="Mark Free" />
+
                </p>
 
         </div>
