@@ -4,8 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/templates/load.html" line="15" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0390a5a0-99cb-4d99-9a99-40cbfe6dec10" name="Default" comment="w">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/appinfo.html" afterPath="$PROJECT_DIR$/templates/appinfo.html" />
+    <list default="true" id="0390a5a0-99cb-4d99-9a99-40cbfe6dec10" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/views.py" afterPath="$PROJECT_DIR$/main/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -34,7 +33,7 @@
       <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="9" selection-start="2957" selection-end="2957" vertical-scroll-proportion="0.6806723" vertical-offset="930" max-vertical-offset="2610">
+            <state line="72" column="0" selection-start="2294" selection-end="2294" vertical-scroll-proportion="0.075630255" vertical-offset="915" max-vertical-offset="2565">
               <folding />
             </state>
           </provider>
@@ -742,7 +741,11 @@
       <created>1386837590632</created>
       <updated>1386837590632</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="app info commit goes to manage">
+      <created>1386838692228</created>
+      <updated>1386838692229</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -814,7 +817,8 @@
     <MESSAGE value="fix" />
     <MESSAGE value="a" />
     <MESSAGE value="w" />
-    <option name="LAST_COMMIT_MESSAGE" value="w" />
+    <MESSAGE value="app info commit goes to manage" />
+    <option name="LAST_COMMIT_MESSAGE" value="app info commit goes to manage" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -926,7 +930,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="9" selection-start="2957" selection-end="2957" vertical-scroll-proportion="0.6806723" vertical-offset="930" max-vertical-offset="2610">
+        <state line="72" column="0" selection-start="2294" selection-end="2294" vertical-scroll-proportion="0.075630255" vertical-offset="915" max-vertical-offset="2565">
           <folding />
         </state>
       </provider>

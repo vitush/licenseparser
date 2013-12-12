@@ -72,9 +72,6 @@ def search(request):
 
 
 
-def saveapp(request):
-    pass
-
 def appinfo(request):
     c = {}
     c.update(csrf(request))
