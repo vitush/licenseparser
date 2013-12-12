@@ -4,7 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/templates/load.html" line="15" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0390a5a0-99cb-4d99-9a99-40cbfe6dec10" name="Default" comment="changed buttom position">
+    <list default="true" id="0390a5a0-99cb-4d99-9a99-40cbfe6dec10" name="Default" comment="added search">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/appinfo.html" afterPath="$PROJECT_DIR$/templates/appinfo.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -60,7 +60,7 @@
       <file leaf-file-name="appinfo.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/appinfo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="16" selection-start="1378" selection-end="1378" vertical-scroll-proportion="0.47285464" vertical-offset="420" max-vertical-offset="1185">
+            <state line="38" column="99" selection-start="837" selection-end="837" vertical-scroll-proportion="0.262697" vertical-offset="420" max-vertical-offset="1200">
               <folding />
             </state>
           </provider>
@@ -766,7 +766,11 @@
       <created>1386839661431</created>
       <updated>1386839661431</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="changed buttom position">
+      <created>1386845163277</created>
+      <updated>1386845163277</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -841,7 +845,8 @@
     <MESSAGE value="app info commit goes to manage" />
     <MESSAGE value="delete not used function" />
     <MESSAGE value="z" />
-    <option name="LAST_COMMIT_MESSAGE" value="z" />
+    <MESSAGE value="changed buttom position" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed buttom position" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -953,7 +958,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/appinfo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="16" selection-start="1378" selection-end="1378" vertical-scroll-proportion="0.47285464" vertical-offset="420" max-vertical-offset="1185">
+        <state line="38" column="99" selection-start="837" selection-end="837" vertical-scroll-proportion="0.262697" vertical-offset="420" max-vertical-offset="1200">
           <folding />
         </state>
       </provider>
