@@ -7,7 +7,19 @@ import licensesIO
 from django.core.context_processors import csrf
 import models
 import csv
-from licenses import  settings
+from licenses import settings
+import urllib
+from bs4 import BeautifulSoup
+
+def softpedia_search(url):
+    f = urllib.urlopen(url)
+    html_doc = f.read()
+    f.close()
+    soup = BeautifulSoup(html_doc)
+    res = ""
+    for table in soup.find_all(class_="narrow_listheadings"):
+        res += table.decode()
+    return res
 
 def reload(request):
     c = {}
@@ -123,6 +135,10 @@ def appinfo(request):
         c['pclist'] = application.computer_set.all()
         c["app_installation"] = application.installation
         c["app_comment"] = application.comment
+        c["softpedia_content"] = softpedia_search(
+                                "http://www.softpedia.com/dyn-search.php?search_term=%s"%name_short)
+
+
 
     return render_to_response('appinfo.html',c)
 

@@ -70,7 +70,6 @@
                <p>
                 <input name="action" type="submit" value="Mark Free"  />
                 <input name="action" type="submit" value="Mark Licensed" />
-                <input  type="button" onclick="softpedia();" value="Mark as Free with Softpedia URL " />
                 <input  type="hidden" id="action_id" name="action1" value="Mark Free" />
 
                </p>
@@ -96,4 +95,23 @@
 </form>
 
 
+{% endblock %}
+
+
+{% block page_content_softpedia %}
+    <div class="row">
+    <hr>
+        <div class="span8">
+             <p>
+                 <b>Softpedia Search Result :</b>
+             </p>
+        </div>
+        <div class="span2">
+
+                  <input  type="button" onclick="softpedia();" value="Mark as Free and add Softpedia URL" />
+        </div>
+    </div>
+    <div class="row">
+           {{ softpedia_content|safe }}
+    </div>
 {% endblock %}
