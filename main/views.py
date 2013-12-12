@@ -98,6 +98,7 @@ def appinfo(request):
         name_full = application.name
 
         name_full=application.name
+        name_short = application.name
         name_list = name_full.split("-")
 
         if len(name_list) > 1:
