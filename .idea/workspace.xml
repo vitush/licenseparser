@@ -4,8 +4,8 @@
     <bookmark url="file://$PROJECT_DIR$/templates/load.html" line="15" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0390a5a0-99cb-4d99-9a99-40cbfe6dec10" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/report_pc.html" afterPath="$PROJECT_DIR$/templates/report_pc.html" />
+    <list default="true" id="0390a5a0-99cb-4d99-9a99-40cbfe6dec10" name="Default" comment="z">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/appinfo.html" afterPath="$PROJECT_DIR$/templates/appinfo.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="a404b25d-6ec1-41eb-868f-7c8799b765b0" name="New changelist" comment="" />
@@ -33,7 +33,7 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="0" selection-start="2294" selection-end="2294" vertical-scroll-proportion="0.0" vertical-offset="915" max-vertical-offset="2565">
+            <state line="98" column="0" selection-start="3008" selection-end="3008" vertical-scroll-proportion="0.0" vertical-offset="1080" max-vertical-offset="2565">
               <folding />
             </state>
           </provider>
@@ -51,16 +51,16 @@
       <file leaf-file-name="manage.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/manage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="13" selection-start="423" selection-end="869" vertical-scroll-proportion="-16.25" vertical-offset="0" max-vertical-offset="1140">
+            <state line="19" column="0" selection-start="331" selection-end="331" vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="1140">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="appinfo.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="appinfo.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/appinfo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="0" selection-start="1713" selection-end="1713" vertical-scroll-proportion="-36.875" vertical-offset="0" max-vertical-offset="1110">
+            <state line="23" column="1" selection-start="392" selection-end="392" vertical-scroll-proportion="0.28896672" vertical-offset="180" max-vertical-offset="1125">
               <folding />
             </state>
           </provider>
@@ -75,10 +75,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="report_pc.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="report_pc.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/report_pc.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="16" selection-start="1696" selection-end="1696" vertical-scroll-proportion="0.57968473" vertical-offset="464" max-vertical-offset="1035">
+            <state line="53" column="16" selection-start="1696" selection-end="1696" vertical-scroll-proportion="-13.791667" vertical-offset="464" max-vertical-offset="1035">
               <folding />
             </state>
           </provider>
@@ -123,10 +123,10 @@
         <option value="$PROJECT_DIR$/licenses.sh" />
         <option value="$PROJECT_DIR$/templates/manage.html" />
         <option value="$PROJECT_DIR$/main/licensesIO.py" />
-        <option value="$PROJECT_DIR$/templates/appinfo.html" />
-        <option value="$PROJECT_DIR$/main/views.py" />
         <option value="$PROJECT_DIR$/templates/search.html" />
         <option value="$PROJECT_DIR$/templates/report_pc.html" />
+        <option value="$PROJECT_DIR$/main/views.py" />
+        <option value="$PROJECT_DIR$/templates/appinfo.html" />
       </list>
     </option>
   </component>
@@ -758,7 +758,11 @@
       <created>1386838722169</created>
       <updated>1386838722169</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="z">
+      <created>1386839446991</created>
+      <updated>1386839446991</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -832,7 +836,8 @@
     <MESSAGE value="w" />
     <MESSAGE value="app info commit goes to manage" />
     <MESSAGE value="delete not used function" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete not used function" />
+    <MESSAGE value="z" />
+    <option name="LAST_COMMIT_MESSAGE" value="z" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -914,16 +919,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/views.py">
+    <entry file="file://$PROJECT_DIR$/templates/manage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="0" selection-start="2294" selection-end="2294" vertical-scroll-proportion="0.0" vertical-offset="915" max-vertical-offset="2565">
+        <state line="19" column="0" selection-start="331" selection-end="331" vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="1140">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/appinfo.html">
+    <entry file="file://$PROJECT_DIR$/main/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="0" selection-start="1713" selection-end="1713" vertical-scroll-proportion="-36.875" vertical-offset="0" max-vertical-offset="1110">
+        <state line="98" column="0" selection-start="3008" selection-end="3008" vertical-scroll-proportion="0.0" vertical-offset="1080" max-vertical-offset="2565">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/report_pc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="16" selection-start="1696" selection-end="1696" vertical-scroll-proportion="-13.791667" vertical-offset="464" max-vertical-offset="1035">
           <folding />
         </state>
       </provider>
@@ -935,16 +947,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/manage.html">
+    <entry file="file://$PROJECT_DIR$/templates/appinfo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="13" selection-start="423" selection-end="869" vertical-scroll-proportion="-16.25" vertical-offset="0" max-vertical-offset="1140">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/report_pc.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="16" selection-start="1696" selection-end="1696" vertical-scroll-proportion="0.57968473" vertical-offset="464" max-vertical-offset="1035">
+        <state line="23" column="1" selection-start="392" selection-end="392" vertical-scroll-proportion="0.28896672" vertical-offset="180" max-vertical-offset="1125">
           <folding />
         </state>
       </provider>
