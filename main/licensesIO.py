@@ -33,15 +33,26 @@ class myThread (threading.Thread):
         return self._stop.isSet()
 
 
+    def clear_pc_info(self):
+
+        pass
+
     def load(self):
         dir = settings.DATA_ROOT
         docs = os.listdir(dir)
         self.files_total = len(docs)
 
+        models.Computer.objects.all().delete()
+
         for doc in docs:
             f= dir+"/"+doc
             print("Loading %s" % f)
-            dom = xml.dom.minidom.parse(f)
+            try:
+                dom = xml.dom.minidom.parse(f)
+            except:
+                print("File %s is corrupted and cannot be parsed. Skipped"% f)
+                continue
+
             self.files_loaded = self.files_loaded + 1
             self.files_current = doc
 
@@ -55,10 +66,25 @@ class myThread (threading.Thread):
             else:
                 pc_owner = dom.getElementsByTagName('User_name')[0].firstChild.data
 
-            computer, created = models.Computer.objects.get_or_create(name=pc_name, owner=pc_owner)
-            if created:
-                print ("New Computer added to Database : %s"% pc_name)
+            #print("pc-name %s"%pc_name)
+            #computer = models.Computer.objects.get(name=pc_name, owner=pc_owner)
+            #print("computer %s"%computer)
+
+            #if computer is not None:
+            #    computer.delete()
+                #print("Deleted %s"%computer)
+
+            computer = models.Computer.objects.create(name=pc_name, owner=pc_owner)
+            if computer is not None:
+                #print("Created %s"% computer)
                 computer.save()
+
+
+
+            #computer, created = models.Computer.objects.get_or_create(name=pc_name, owner=pc_owner)
+            #if created:
+            #    print ("New Computer added to Database : %s"% pc_name)
+            #    computer.save()
 
             # Parsing installed Software
             installed_sw_container = dom.getElementsByTagName('InstalledSoftware')
