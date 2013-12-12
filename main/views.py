@@ -94,9 +94,16 @@ def appinfo(request):
         #    application.save()
         #    return HttpResponseRedirect("/manage/")
 
+        import re
+        name_full = application.name
+
+        name_full="Windows Support Tools - 2  - 5.2.3790.3959"
+        name_list = name_full.split("-")[:-1]
+        name_short = "-".join(name_list)
 
         c['app_id'] = application_id
         c['app_name'] = application.name
+        c['app_name_short'] = name_short
         c['app_version'] = application.version
         c['app_publisher'] = publisher.name
         c['app_license'] = application.get_license_txt()
