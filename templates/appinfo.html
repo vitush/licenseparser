@@ -42,15 +42,20 @@
             <input name="cost"               value="{{ app_cost }}" class="appname"><br><br>
             <input name="installation" readonly value="{{ app_installation }}" class="appname" ><br><br>
 
+            <p> Comment:&nbsp;<br>
+                <textarea type="text" cols="40" name="comment">{{ app_comment }}</textarea>
+            </p>
+               <p>
+                <input name="action" type="submit" value="Mark Free"  />
+                <input name="action" type="submit" value="Mark Licensed" />
+               </p>
+
         </div>
 
 
     </div>
     <div class="span4">
 
-            <p> Comment:&nbsp;<br>
-                <textarea type="text" cols="40" name="comment">{{ app_comment }}</textarea>
-            </p>
             <p> Installed on :&nbsp; <br>
                 <select name="pclist" size="10"">
                     {% for pc in pclist %}
@@ -61,8 +66,7 @@
 
     </div>
 
-    <input name="action" type="submit" value="Mark Free"  />
-    <input name="action" type="submit" value="Mark Licensed" />
+
 
 </form>
 

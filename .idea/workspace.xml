@@ -4,7 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/templates/load.html" line="15" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0390a5a0-99cb-4d99-9a99-40cbfe6dec10" name="Default" comment="z">
+    <list default="true" id="0390a5a0-99cb-4d99-9a99-40cbfe6dec10" name="Default" comment="changed buttom position">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/appinfo.html" afterPath="$PROJECT_DIR$/templates/appinfo.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -60,7 +60,7 @@
       <file leaf-file-name="appinfo.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/appinfo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="1" selection-start="392" selection-end="392" vertical-scroll-proportion="0.28896672" vertical-offset="180" max-vertical-offset="1125">
+            <state line="46" column="16" selection-start="1378" selection-end="1378" vertical-scroll-proportion="0.47285464" vertical-offset="420" max-vertical-offset="1185">
               <folding />
             </state>
           </provider>
@@ -762,7 +762,11 @@
       <created>1386839446991</created>
       <updated>1386839446991</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="z">
+      <created>1386839661431</created>
+      <updated>1386839661431</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -949,7 +953,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/appinfo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="1" selection-start="392" selection-end="392" vertical-scroll-proportion="0.28896672" vertical-offset="180" max-vertical-offset="1125">
+        <state line="46" column="16" selection-start="1378" selection-end="1378" vertical-scroll-proportion="0.47285464" vertical-offset="420" max-vertical-offset="1185">
           <folding />
         </state>
       </provider>
