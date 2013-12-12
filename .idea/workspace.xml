@@ -33,7 +33,7 @@
       <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="105" column="45" selection-start="3222" selection-end="3222" vertical-scroll-proportion="0.6554622" vertical-offset="1065" max-vertical-offset="2745">
+            <state line="103" column="38" selection-start="3172" selection-end="3172" vertical-scroll-proportion="0.6302521" vertical-offset="1050" max-vertical-offset="2730">
               <folding />
             </state>
           </provider>
@@ -782,7 +782,11 @@
       <created>1386849610095</created>
       <updated>1386849610095</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="fix">
+      <created>1386860409531</created>
+      <updated>1386860409531</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -971,7 +975,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="45" selection-start="3222" selection-end="3222" vertical-scroll-proportion="0.6554622" vertical-offset="1065" max-vertical-offset="2745">
+        <state line="103" column="38" selection-start="3172" selection-end="3172" vertical-scroll-proportion="0.6302521" vertical-offset="1050" max-vertical-offset="2730">
           <folding />
         </state>
       </provider>
