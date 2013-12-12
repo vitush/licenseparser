@@ -105,6 +105,10 @@ def appinfo(request):
             name_list = name_list[:-1]
             name_list = name_full.split("-")[:-1]
             name_short = "-".join(name_list)
+            if publisher.name != "Unknown" :
+                name_short += " "
+                name_short += publisher.name
+
 
         c['app_id'] = application_id
         c['app_name'] = application.name
