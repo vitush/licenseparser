@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0390a5a0-99cb-4d99-9a99-40cbfe6dec10" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/appinfo.html" afterPath="$PROJECT_DIR$/templates/appinfo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/views.py" afterPath="$PROJECT_DIR$/main/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="a404b25d-6ec1-41eb-868f-7c8799b765b0" name="New changelist" comment="" />
@@ -34,7 +33,7 @@
       <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="0" selection-start="3144" selection-end="3144" vertical-scroll-proportion="0.27731094" vertical-offset="1245" max-vertical-offset="2850">
+            <state line="108" column="41" selection-start="3392" selection-end="3392" vertical-scroll-proportion="0.42857143" vertical-offset="1245" max-vertical-offset="2850">
               <folding />
             </state>
           </provider>
@@ -61,7 +60,7 @@
       <file leaf-file-name="appinfo.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/appinfo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="118" selection-start="856" selection-end="856" vertical-scroll-proportion="-6.25" vertical-offset="420" max-vertical-offset="1245">
+            <state line="38" column="75" selection-start="813" selection-end="813" vertical-scroll-proportion="-6.25" vertical-offset="420" max-vertical-offset="1245">
               <folding />
             </state>
           </provider>
@@ -126,8 +125,8 @@
         <option value="$PROJECT_DIR$/main/licensesIO.py" />
         <option value="$PROJECT_DIR$/templates/search.html" />
         <option value="$PROJECT_DIR$/templates/report_pc.html" />
-        <option value="$PROJECT_DIR$/templates/appinfo.html" />
         <option value="$PROJECT_DIR$/main/views.py" />
+        <option value="$PROJECT_DIR$/templates/appinfo.html" />
       </list>
     </option>
   </component>
@@ -807,7 +806,11 @@
       <created>1386867386133</created>
       <updated>1386867386133</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="fix">
+      <created>1386867539448</created>
+      <updated>1386867539449</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -990,14 +993,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/appinfo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="118" selection-start="856" selection-end="856" vertical-scroll-proportion="-6.25" vertical-offset="420" max-vertical-offset="1245">
+        <state line="38" column="75" selection-start="813" selection-end="813" vertical-scroll-proportion="-6.25" vertical-offset="420" max-vertical-offset="1245">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="0" selection-start="3144" selection-end="3144" vertical-scroll-proportion="0.27731094" vertical-offset="1245" max-vertical-offset="2850">
+        <state line="108" column="41" selection-start="3392" selection-end="3392" vertical-scroll-proportion="0.42857143" vertical-offset="1245" max-vertical-offset="2850">
           <folding />
         </state>
       </provider>
