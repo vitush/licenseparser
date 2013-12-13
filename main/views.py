@@ -122,7 +122,7 @@ def appinfo(request):
             name_list = name_full.split(" - ")[:-1]
             name_short = "-".join(name_list)
 
-        m = re.match(r"(?P<name>[A-Z\-a-z_\ ]+).*", name_full)
+        m = re.match(r"(?P<name>[A-Z\-a-z_\ ]+).*", name_short)
         if m is not None:
             if m.group('name') is not None:
                name_short =  m.group('name')
