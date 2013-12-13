@@ -29,6 +29,8 @@
 {
      width:600px !important;
 }
+    table{ font-size:0.8em; font-weight:bold; font-family:helvetica,sans-serif; }
+
 </style>
 
 
@@ -99,6 +101,7 @@
 
 
 {% block page_content_softpedia %}
+    {%  if softpedia_content|length > 0 %}
     <div class="row">
     <hr>
         <div class="span8">
@@ -114,4 +117,6 @@
     <div class="row">
            {{ softpedia_content|safe }}
     </div>
+    {% endif %}
 {% endblock %}
+

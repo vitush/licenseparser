@@ -10,6 +10,7 @@ import csv
 from licenses import settings
 import urllib
 from bs4 import BeautifulSoup
+import re
 
 def softpedia_search(url):
     f = urllib.urlopen(url)
@@ -20,6 +21,8 @@ def softpedia_search(url):
     for table in soup.find_all(class_="narrow_listheadings"):
         res += table.decode()
     return res
+
+
 
 def reload(request):
     c = {}
@@ -118,6 +121,11 @@ def appinfo(request):
             name_list = name_list[:-1]
             name_list = name_full.split("-")[:-1]
             name_short = "-".join(name_list)
+            m = re.match(r"(?P<name>[\D^-]+)+.*(?P<ver>\d+)", name_full)
+            if m is not None:
+                if m.group('name') is not None:
+                   name_short =  m.group('name')
+
             name_short_vendor= name_short
             if publisher.name != "Unknown" :
                 name_short_vendor += " "
