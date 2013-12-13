@@ -188,10 +188,21 @@ def write_pc(computer,writer):
         writer.writerow(['',''])
         writer.writerow(['',''])
         writer.writerow([computer])
-
+        pc_cost_sum=0
         for app in computer.applications.all():
             publ = models.Publisher.objects.get(name=app.publisher)
-            writer.writerow(['',app.get_name(),publ.get_publisher(),app.get_license_txt(),str(app.get_cost())])
+            writer.writerow(['',
+                             app.get_name(),
+                             publ.get_publisher(),
+                             app.get_license_txt(),
+                             str(app.get_cost()),
+                             '',
+                             app.get_comment()
+            ])
+            pc_cost_sum += app.get_cost()
+
+        writer.writerow(['','','','','',str(pc_cost_sum)])
+
 
 def download(request):
     c = {}

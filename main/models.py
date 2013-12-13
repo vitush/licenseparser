@@ -40,6 +40,9 @@ class Application(models.Model):
     def get_cost(self):
         return self.cost
 
+    def get_comment(self):
+        return self.comment
+
     def get_publisher(self):
         return unicodedata.normalize('NFKD', self.publisher).encode('ascii','ignore')
 
