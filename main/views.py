@@ -119,7 +119,7 @@ def appinfo(request):
 
         if len(name_list) > 1:
             name_list = name_list[:-1]
-            name_list = name_full.split("-")[:-1]
+            name_list = name_full.split(" - ")[:-1]
             name_short = "-".join(name_list)
 
         m = re.match(r"(?P<name>[A-Za-z_\ ]+).*", name_full)
