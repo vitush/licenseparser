@@ -33,7 +33,7 @@
       <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="121" column="42" selection-start="3602" selection-end="3602" vertical-scroll-proportion="0.63993174" vertical-offset="1440" max-vertical-offset="3375">
+            <state line="121" column="51" selection-start="3611" selection-end="3611" vertical-scroll-proportion="0.63993174" vertical-offset="1440" max-vertical-offset="3375">
               <folding>
                 <element signature="e#26#66#0" expanded="true" />
               </folding>
@@ -841,7 +841,11 @@
       <created>1386932192817</created>
       <updated>1386932192817</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="fix">
+      <created>1386936566460</created>
+      <updated>1386936566460</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -917,11 +921,11 @@
     <MESSAGE value="changed buttom position" />
     <MESSAGE value="added search" />
     <MESSAGE value="added softpedia" />
-    <MESSAGE value="fix" />
     <MESSAGE value="added wikipedia url to commit" />
     <MESSAGE value="added parsing from softpedia" />
     <MESSAGE value="cur version in search" />
-    <option name="LAST_COMMIT_MESSAGE" value="cur version in search" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1036,7 +1040,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="42" selection-start="3602" selection-end="3602" vertical-scroll-proportion="0.63993174" vertical-offset="1440" max-vertical-offset="3375">
+        <state line="121" column="51" selection-start="3611" selection-end="3611" vertical-scroll-proportion="0.63993174" vertical-offset="1440" max-vertical-offset="3375">
           <folding>
             <element signature="e#26#66#0" expanded="true" />
           </folding>
