@@ -41,7 +41,8 @@ class Application(models.Model):
         return self.cost
 
     def get_comment(self):
-        return self.comment
+        return unicodedata.normalize('NFKD', self.comment).encode('ascii','ignore')
+
 
     def get_publisher(self):
         return unicodedata.normalize('NFKD', self.publisher).encode('ascii','ignore')
