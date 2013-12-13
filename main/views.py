@@ -121,10 +121,11 @@ def appinfo(request):
             name_list = name_list[:-1]
             name_list = name_full.split("-")[:-1]
             name_short = "-".join(name_list)
-            m = re.match(r"(?P<name>[\D^-]+)+.*(?P<ver>\d+)", name_full)
-            if m is not None:
-                if m.group('name') is not None:
-                   name_short =  m.group('name')
+
+        m = re.match(r"(?P<name>[A-Za-z_\ ]+).*", name_full)
+        if m is not None:
+            if m.group('name') is not None:
+               name_short =  m.group('name')
 
             name_short_vendor= name_short
             if publisher.name != "Unknown" :
