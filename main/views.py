@@ -13,13 +13,20 @@ from bs4 import BeautifulSoup
 import re
 
 def softpedia_search(url):
-    f = urllib.urlopen(url)
-    html_doc = f.read()
-    f.close()
-    soup = BeautifulSoup(html_doc)
+
     res = ""
-    for table in soup.find_all(class_="narrow_listheadings"):
-        res += table.decode()
+
+    try:
+        f = urllib.urlopen(url)
+        html_doc = f.read()
+        f.close()
+        soup = BeautifulSoup(html_doc)
+        res = ""
+        for table in soup.find_all(class_="narrow_listheadings"):
+            res += table.decode()
+    except:
+        pass
+
     return res
 
 
