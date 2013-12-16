@@ -16,6 +16,10 @@
 {
      width:350px !important;
 }
+.selectwidthauto1
+{
+     width:500px !important;
+}
 </style>
 
 
@@ -53,7 +57,7 @@
 <div class="span4">
 <h5>Software require license (<b>{{ licensed_software|length }}</b>)</h5>
         <form id="licensed_software_id"  action="/manage/" method="post">  {% csrf_token %}
-            <select name="software" multiple="true" size="20" title="Need License" class="selectwidthauto">
+            <select name="software" multiple="true" size="20" title="Need License" class="selectwidthauto1">
                 {% for sw in licensed_software %}
                    <option value="{{sw.id}} {% if sw.cost > 0 %} [{{ sw.cost }}] {% endif %}"
                            ondblclick="swinfo('licensed_software_id');"
