@@ -97,11 +97,16 @@ def search(request):
 def appinfo(request):
     c = {}
     c.update(csrf(request))
+    c['return_page'] = "/manage/"
 
     if request.method == 'POST':
 
         action = request.POST.get("action",None)
 
+        from_page = request.POST.get("from",None)
+        if from_page is not None:
+            if from_page == "prices"
+            c['return_page'] = "/prices/"
 
 
         application_id = request.POST['software']
