@@ -170,7 +170,7 @@ def manage(request):
     c = {}
     c.update(csrf(request))
 
-
+    action = None
 
     if request.method == 'POST':
         action = request.POST.get('action',None)
@@ -203,8 +203,9 @@ def manage(request):
     c['free_software'] = models.Application.objects.filter(license=1)
     c['licensed_software'] = models.Application.objects.filter(license=2)
 
-    if action == "Prices":
-            render_to_response('price.html',c)
+    if action is not None:
+        if action == "Prices":
+                render_to_response('price.html',c)
 
 
     return render_to_response('manage.html',c)

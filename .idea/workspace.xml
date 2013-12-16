@@ -33,7 +33,7 @@
       <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="8" selection-start="2861" selection-end="2861" vertical-scroll-proportion="0.30022076" vertical-offset="1288" max-vertical-offset="3915">
+            <state line="172" column="17" selection-start="5143" selection-end="5143" vertical-scroll-proportion="0.27152318" vertical-offset="2334" max-vertical-offset="3930">
               <folding>
                 <element signature="e#26#66#0" expanded="true" />
               </folding>
@@ -898,7 +898,11 @@
       <created>1387184547870</created>
       <updated>1387184547870</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="added prices page">
+      <created>1387184578201</created>
+      <updated>1387184578201</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1093,7 +1097,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="8" selection-start="2861" selection-end="2861" vertical-scroll-proportion="0.30022076" vertical-offset="1288" max-vertical-offset="3915">
+        <state line="172" column="17" selection-start="5143" selection-end="5143" vertical-scroll-proportion="0.27152318" vertical-offset="2334" max-vertical-offset="3930">
           <folding>
             <element signature="e#26#66#0" expanded="true" />
           </folding>
