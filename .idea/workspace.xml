@@ -33,7 +33,7 @@
       <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="143" column="41" selection-start="4199" selection-end="4199" vertical-scroll-proportion="0.48675495" vertical-offset="1704" max-vertical-offset="3930">
+            <state line="210" column="45" selection-start="6402" selection-end="6402" vertical-scroll-proportion="0.8509934" vertical-offset="2379" max-vertical-offset="3975">
               <folding>
                 <element signature="e#26#66#0" expanded="true" />
               </folding>
@@ -53,7 +53,7 @@
       <file leaf-file-name="manage.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/manage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="56" selection-start="2714" selection-end="2714" vertical-scroll-proportion="-43.625" vertical-offset="18" max-vertical-offset="1260">
+            <state line="71" column="56" selection-start="2714" selection-end="2714" vertical-scroll-proportion="-28.625" vertical-offset="378" max-vertical-offset="1260">
               <folding />
             </state>
           </provider>
@@ -71,7 +71,7 @@
       <file leaf-file-name="appinfo.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/appinfo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="447" selection-end="447" vertical-scroll-proportion="29.5" vertical-offset="1038" max-vertical-offset="1920">
+            <state line="22" column="0" selection-start="447" selection-end="447" vertical-scroll-proportion="-0.5" vertical-offset="318" max-vertical-offset="1920">
               <folding />
             </state>
           </provider>
@@ -910,7 +910,11 @@
       <created>1387184698857</created>
       <updated>1387184698857</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="added prices page">
+      <created>1387184789501</created>
+      <updated>1387184789501</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1091,21 +1095,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/manage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="56" selection-start="2714" selection-end="2714" vertical-scroll-proportion="-43.625" vertical-offset="18" max-vertical-offset="1260">
+        <state line="71" column="56" selection-start="2714" selection-end="2714" vertical-scroll-proportion="-28.625" vertical-offset="378" max-vertical-offset="1260">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/appinfo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="447" selection-end="447" vertical-scroll-proportion="29.5" vertical-offset="1038" max-vertical-offset="1920">
+        <state line="22" column="0" selection-start="447" selection-end="447" vertical-scroll-proportion="-0.5" vertical-offset="318" max-vertical-offset="1920">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="41" selection-start="4199" selection-end="4199" vertical-scroll-proportion="0.48675495" vertical-offset="1704" max-vertical-offset="3930">
+        <state line="210" column="45" selection-start="6402" selection-end="6402" vertical-scroll-proportion="0.8509934" vertical-offset="2379" max-vertical-offset="3975">
           <folding>
             <element signature="e#26#66#0" expanded="true" />
           </folding>

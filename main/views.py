@@ -101,7 +101,7 @@ def appinfo(request):
     if request.method == 'POST':
 
         action = request.POST.get("action",None)
-        print action
+
 
         if action is None:
             return HttpResponseRedirect("/manage/")
@@ -206,6 +206,9 @@ def manage(request):
     c['free_software'] = models.Application.objects.filter(license=1)
     c['licensed_software'] = models.Application.objects.filter(license=2)
 
+    action = request.POST.get("action",None)
+    if action == "Prices":
+        return render_to_response('price.html',c)
 
 
     return render_to_response('manage.html',c)
