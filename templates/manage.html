@@ -9,6 +9,23 @@
             document.getElementById(form_id).submit();
 
         }
+        function gotoprices(form_id) {
+
+            document.getElementById(form_id).action='/appinfo/';
+            document.getElementById(form_id).submit();
+
+        }
+
+        //function jumpToIndex(var index) {
+        //    var list = document.getElementByID('" + this.list.ClientID + "');
+        //    for(var i=0; i < list.length; i++) {
+        //        if(list.options[i].value.charAt(0) == index) {
+        //          HOW TO SET THE SCROLL POSITION TO MAKE THAT OBJECT THE TOP OF THE LIST BOX
+        //          break; //pretty sure this is how i would break out of both loops.
+        //        }
+        //    }
+        //}
+
     </script>
 
 <style type="text/css">
@@ -26,9 +43,11 @@
 <div class="span4">
 <h5>License type unknown  (<b>{{ unknown_software|length }}</b>)</h5>
         <form id="unknown_software_id"  action="/manage/" method="post">  {% csrf_token %}
-            <select name="software" multiple="true" size="20" title="Unknown license type" class="selectwidthauto">
+            <select id="unknown_software_id_select" name="software" multiple="true" size="20" title="Unknown license type" class="selectwidthauto"  ">
                 {% for sw in unknown_software %}
-                   <option value="{{sw.id}}" ondblclick="swinfo('unknown_software_id');"  title="{{sw}} ({{sw.publisher}})">{{sw}}</option>
+                   <option value="{{sw.id}}" ondblclick="swinfo('unknown_software_id');"
+
+                           title="{{sw}} ({{sw.publisher}})">{{sw}}</option>
                 {% endfor %}
             </select>
 
@@ -42,7 +61,7 @@
 <div class="span4">
 <h5>Free software (<b>{{ free_software|length }}</b>)</h5>
         <form id="free_software_id" action="/manage/" method="post">  {% csrf_token %}
-            <select name="software" multiple="true" size="20" title="Unknown license type" class="selectwidthauto">
+            <select id="free_software_id_select" name="software" multiple="true" size="20" title="Unknown license type" class="selectwidthauto">
                 {% for sw in free_software %}
                    <option value="{{sw.id}}" ondblclick="swinfo('free_software_id');" title="{{sw}} ({{sw.publisher}})" >{{sw}}</option>
                 {% endfor %}
@@ -57,12 +76,12 @@
 <div class="span4">
 <h5>Software require license (<b>{{ licensed_software|length }}</b>)</h5>
         <form id="licensed_software_id"  action="/manage/" method="post">  {% csrf_token %}
-            <select name="software" multiple="true" size="20" title="Need License" class="selectwidthauto1">
+            <select id="licensed_software_id_select" name="software" multiple="true" size="20" title="Need License" class="selectwidthauto1">
                 {% for sw in licensed_software %}
-                   <option value="{{sw.id}} {% if sw.cost > 0 %} [{{ sw.cost }}] {% endif %}"
+                   <option value="{{sw.id}}"
                            ondblclick="swinfo('licensed_software_id');"
-                           title="{{sw}} ({{sw.publisher}}) {% if sw.cost > 0 %} [ {{ sw.cost }} UAH ] {% endif %}" >
-                       {{sw}}</option>
+                           title="{{sw}} ({{sw.publisher}}) " >
+                        {% if sw.cost > 0 %} [ {{ sw.cost }} ]  {% endif %} {{sw}}</option>
                 {% endfor %}
             </select>
 

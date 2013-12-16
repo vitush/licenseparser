@@ -23,13 +23,15 @@
 
 <div class="span10">
 <h5>Software require license (<b>{{ licensed_software|length }}</b>)</h5>
-        <form id="licensed_software_id"  action="/manage/" method="post">  {% csrf_token %}
+        <form id="licensed_software_id"  action="/manage/" method="get">  {% csrf_token %}
             <input type="hidden" name="from_page" value="prices">
             <select name="software" multiple="true" size="20" title="Need License" class="selectwidthauto1">
                 {% for sw in licensed_software %}
-                   <option value="{{sw.id}} {% if sw.cost > 0 %} [{{ sw.cost }}] {% endif %}"
+                   <option value="{{sw.id}}"
                            ondblclick="swinfo('licensed_software_id');"
                            title="{{sw}} ({{sw.publisher}}) {% if sw.cost > 0 %} [ {{ sw.cost }} UAH ] {% endif %}" >
+
+
                         {% if sw.cost > 0 %} [ {{ sw.cost }} UAH ] {% endif %} {{sw}}</option>
                 {% endfor %}
             </select>

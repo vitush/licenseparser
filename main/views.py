@@ -101,13 +101,6 @@ def appinfo(request):
 
     if request.method == 'POST':
 
-        action = request.POST.get("action",None)
-
-        from_page = request.POST.get("from",None)
-        if from_page is not None:
-            if from_page == "prices":
-                c['return_page'] = "/prices/"
-
 
         application_id = request.POST['software']
 
@@ -166,6 +159,14 @@ def appinfo(request):
 
     return render_to_response('appinfo.html',c)
 
+def prices(request):
+    c = {}
+    c.update(csrf(request))
+    publisher = models.Publisher.objects.all()
+    c['licensed_software'] = models.Application.objects.filter(license=2,publisher__in=publisher)
+    return render_to_response('price.html',c)
+
+
 
 def manage(request):
     c = {}
@@ -176,8 +177,11 @@ def manage(request):
     if request.method == 'POST':
         action = request.POST.get('action',None)
 
-        if action is None:
-            return Http404("Manage: undefined action")
+        action = request.POST.get("action",None)
+
+        if action is not None:
+            if action == "Prices":
+                return HttpResponseRedirect("/prices/")
 
 
         sw_list = request.POST.getlist('software')
@@ -203,11 +207,6 @@ def manage(request):
     c['unknown_software'] = models.Application.objects.filter(license=0)
     c['free_software'] = models.Application.objects.filter(license=1)
     c['licensed_software'] = models.Application.objects.filter(license=2)
-
-    action = request.POST.get("action",None)
-    if action == "Prices":
-        return render_to_response('price.html',c)
-
 
     return render_to_response('manage.html',c)
 

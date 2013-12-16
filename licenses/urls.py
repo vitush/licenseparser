@@ -16,6 +16,7 @@ urlpatterns = patterns('',
     url(r'^load/$', 'main.views.load', name='load'),
     url(r'^download/$', 'main.views.download', name='download'),
     url(r'^appinfo/$', 'main.views.appinfo', name='appinfo'),
+    url(r'^prices/$', 'main.views.prices', name='prices'),
 
     #url(r'^static/', document_root=settings.STATIC_ROOT),
     #(r'^static/(?P<path>.*)$', 'django.views.static.serve',
