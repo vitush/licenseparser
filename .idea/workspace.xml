@@ -4,10 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/templates/load.html" line="15" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0390a5a0-99cb-4d99-9a99-40cbfe6dec10" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/price.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/manage.html" afterPath="$PROJECT_DIR$/templates/manage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/views.py" afterPath="$PROJECT_DIR$/main/views.py" />
+    <list default="true" id="0390a5a0-99cb-4d99-9a99-40cbfe6dec10" name="Default" comment="added prices page">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="a404b25d-6ec1-41eb-868f-7c8799b765b0" name="New changelist" comment="" />
@@ -35,7 +32,7 @@
       <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="51" selection-start="2993" selection-end="2993" vertical-scroll-proportion="0.33333334" vertical-offset="1288" max-vertical-offset="3885">
+            <state line="105" column="18" selection-start="2929" selection-end="2929" vertical-scroll-proportion="0.31677705" vertical-offset="1288" max-vertical-offset="3885">
               <folding>
                 <element signature="e#26#66#0" expanded="true" />
               </folding>
@@ -73,7 +70,7 @@
       <file leaf-file-name="appinfo.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/appinfo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="447" selection-end="447" vertical-scroll-proportion="6.875" vertical-offset="495" max-vertical-offset="1920">
+            <state line="22" column="0" selection-start="447" selection-end="447" vertical-scroll-proportion="29.5" vertical-offset="1038" max-vertical-offset="1920">
               <folding />
             </state>
           </provider>
@@ -892,7 +889,11 @@
       <created>1387183756883</created>
       <updated>1387183756883</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="added prices page">
+      <created>1387184435379</created>
+      <updated>1387184435379</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -947,7 +948,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Fixed unknown PC owner&#10;" />
     <MESSAGE value="Fixed  &#10;" />
     <MESSAGE value="Added start-stop script" />
     <MESSAGE value="Unicode changes" />
@@ -972,7 +972,8 @@
     <MESSAGE value="fix" />
     <MESSAGE value="Ignore softpedia exceptions" />
     <MESSAGE value="show prices" />
-    <option name="LAST_COMMIT_MESSAGE" value="show prices" />
+    <MESSAGE value="added prices page" />
+    <option name="LAST_COMMIT_MESSAGE" value="added prices page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1064,9 +1065,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/price.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="56" selection-start="1181" selection-end="1181" vertical-scroll-proportion="-22.5" vertical-offset="0" max-vertical-offset="735">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/appinfo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="447" selection-end="447" vertical-scroll-proportion="6.875" vertical-offset="495" max-vertical-offset="1920">
+        <state line="22" column="0" selection-start="447" selection-end="447" vertical-scroll-proportion="29.5" vertical-offset="1038" max-vertical-offset="1920">
           <folding />
         </state>
       </provider>
@@ -1078,16 +1086,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/price.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="56" selection-start="1181" selection-end="1181" vertical-scroll-proportion="-22.5" vertical-offset="0" max-vertical-offset="735">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="51" selection-start="2993" selection-end="2993" vertical-scroll-proportion="0.33333334" vertical-offset="1288" max-vertical-offset="3885">
+        <state line="105" column="18" selection-start="2929" selection-end="2929" vertical-scroll-proportion="0.31677705" vertical-offset="1288" max-vertical-offset="3885">
           <folding>
             <element signature="e#26#66#0" expanded="true" />
           </folding>
