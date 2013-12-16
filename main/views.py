@@ -210,22 +210,26 @@ def manage(request):
 
     return render_to_response('manage.html',c)
 
-def write_pc(computer,writer):
+def write_pc(computer,writer,licensed_only=False):
         writer.writerow(['',''])
         writer.writerow(['',''])
         writer.writerow([computer])
         pc_cost_sum=0
         for app in computer.applications.all():
-            publ = models.Publisher.objects.get(name=app.publisher)
-            writer.writerow(['',
-                             app.get_name(),
-                             publ.get_publisher(),
-                             app.get_license_txt(),
-                             str(app.get_cost()),
-                             '',
-                             app.get_comment()
-            ])
-            pc_cost_sum += app.get_cost()
+            if licensed_only and app.license != 2:
+                pass
+            else:
+                publ = models.Publisher.objects.get(name=app.publisher)
+                writer.writerow(['',
+                                 app.get_name(),
+                                 publ.get_publisher(),
+                                 app.get_license_txt(),
+                                 str(app.get_cost()),
+                                 '',
+                                 app.get_comment()
+                ])
+                pc_cost_sum += app.get_cost()
+
 
         writer.writerow(['','','','','',str(pc_cost_sum)])
 
@@ -233,20 +237,27 @@ def write_pc(computer,writer):
 def download(request):
     c = {}
     c.update(csrf(request))
-
+    licensed_only=False
 
     if request.method == 'POST':
+
+        action = request.POST.get("download",None)
+        print (action)
+        if action is not None:
+            if action == "Download Total Report (Only Licensed)":
+                licensed_only = True
+
         response = HttpResponse(content_type='text/csv')
         response['Content-Disposition'] = 'attachment; filename="software.csv"'
         writer = csv.writer(response)
         writer.writerow(['',''])
-        writer.writerow(['Computer','Software', 'Publisher', 'License', 'Cost'])
+        writer.writerow(['Computer','Software', 'Publisher', 'License', 'Cost','Total Cost'])
         writer.writerow(['',''])
 
         comp_id = request.POST['computer_id']
         if comp_id == "all" :
             for pc in models.Computer.objects.all():
-                write_pc(pc,writer)
+                write_pc(pc,writer,licensed_only)
 
         else :
             computer = models.Computer.objects.get(id=comp_id)
