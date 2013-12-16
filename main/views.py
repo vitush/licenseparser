@@ -103,10 +103,6 @@ def appinfo(request):
         action = request.POST.get("action",None)
 
 
-        if action is None:
-            return HttpResponseRedirect("/manage/")
-        if action == "Cancel":
-            return HttpResponseRedirect("/manage/")
 
         application_id = request.POST['software']
 
@@ -161,9 +157,6 @@ def appinfo(request):
         c["softpedia_content"] = softpedia_search(
                                 "http://www.softpedia.com/dyn-search.php?search_term=%s"%name_short)
 
-        if action is not None:
-            if action == "Prices":
-                    render_to_response('price.html',c)
 
 
     return render_to_response('appinfo.html',c)
