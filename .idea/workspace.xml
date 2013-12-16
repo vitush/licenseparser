@@ -4,7 +4,8 @@
     <bookmark url="file://$PROJECT_DIR$/templates/load.html" line="15" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0390a5a0-99cb-4d99-9a99-40cbfe6dec10" name="Default" comment="added prices page">
+    <list default="true" id="0390a5a0-99cb-4d99-9a99-40cbfe6dec10" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/views.py" afterPath="$PROJECT_DIR$/main/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="a404b25d-6ec1-41eb-868f-7c8799b765b0" name="New changelist" comment="" />
@@ -32,7 +33,7 @@
       <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="105" column="18" selection-start="2929" selection-end="2929" vertical-scroll-proportion="0.31677705" vertical-offset="1288" max-vertical-offset="3885">
+            <state line="104" column="8" selection-start="2861" selection-end="2861" vertical-scroll-proportion="0.30022076" vertical-offset="1288" max-vertical-offset="3915">
               <folding>
                 <element signature="e#26#66#0" expanded="true" />
               </folding>
@@ -893,7 +894,11 @@
       <created>1387184435379</created>
       <updated>1387184435379</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="added prices page">
+      <created>1387184547870</created>
+      <updated>1387184547870</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1088,7 +1093,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="18" selection-start="2929" selection-end="2929" vertical-scroll-proportion="0.31677705" vertical-offset="1288" max-vertical-offset="3885">
+        <state line="104" column="8" selection-start="2861" selection-end="2861" vertical-scroll-proportion="0.30022076" vertical-offset="1288" max-vertical-offset="3915">
           <folding>
             <element signature="e#26#66#0" expanded="true" />
           </folding>

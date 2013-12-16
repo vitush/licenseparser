@@ -101,6 +101,8 @@ def appinfo(request):
     if request.method == 'POST':
 
         action = request.POST.get("action",None)
+        print action
+
         if action is None:
             return HttpResponseRedirect("/manage/")
         if action == "Cancel":
