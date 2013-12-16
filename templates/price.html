@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+
+    <script>
+        function swinfo(form_id) {
+
+            document.getElementById(form_id).action='/appinfo/';
+            document.getElementById(form_id).submit();
+
+        }
+    </script>
+
+<style type="text/css">
+
+.selectwidthauto1
+{
+     width:600px !important;
+}
+</style>
+
+
+
+<div class="span10">
+<h5>Software require license (<b>{{ licensed_software|length }}</b>)</h5>
+        <form id="licensed_software_id"  action="/manage/" method="post">  {% csrf_token %}
+            <select name="software" multiple="true" size="20" title="Need License" class="selectwidthauto1">
+                {% for sw in licensed_software %}
+                   <option value="{{sw.id}} {% if sw.cost > 0 %} [{{ sw.cost }}] {% endif %}"
+                           ondblclick="swinfo('licensed_software_id');"
+                           title="{{sw}} ({{sw.publisher}}) {% if sw.cost > 0 %} [ {{ sw.cost }} UAH ] {% endif %}" >
+                        {% if sw.cost > 0 %} [ {{ sw.cost }} UAH ] {% endif %} {{sw}}</option>
+                {% endfor %}
+            </select>
+
+        <p>
+        <input name="action" type="submit" value="Cancel" />
+        </p>
+           </form>
+</div>
+
+
+
+{% endblock %}

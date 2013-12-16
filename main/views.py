@@ -1,7 +1,7 @@
 # Create your views here.
 from wsgiref.util import application_uri
 from django.http import HttpResponse, Http404
-from django.shortcuts import render_to_response, HttpResponseRedirect
+from django.shortcuts import render_to_response, HttpResponseRedirect, Http404
 from models import Application,Computer
 import licensesIO
 from django.core.context_processors import csrf
@@ -100,6 +100,11 @@ def appinfo(request):
 
     if request.method == 'POST':
 
+        action = request.POST.get("action",None)
+        if action is None:
+            return HttpResponseRedirect("/manage/")
+        if action == "Cancel":
+            return HttpResponseRedirect("/manage/")
 
         application_id = request.POST['software']
 
@@ -163,10 +168,15 @@ def manage(request):
     c = {}
     c.update(csrf(request))
 
-    print("Manage")
+
 
     if request.method == 'POST':
-        action = request.POST['action']
+        action = request.POST.get('action',None)
+
+        if action is None:
+            return Http404("Manage: undefined action")
+
+
         sw_list = request.POST.getlist('software')
 
         new_comment = request.POST.get('comment', None)
@@ -186,9 +196,15 @@ def manage(request):
                     app.cost = new_cost
                 app.save()
 
+
     c['unknown_software'] = models.Application.objects.filter(license=0)
     c['free_software'] = models.Application.objects.filter(license=1)
     c['licensed_software'] = models.Application.objects.filter(license=2)
+
+    if action == "Prices":
+            render_to_response('price.html',c)
+
+
     return render_to_response('manage.html',c)
 
 def write_pc(computer,writer):
