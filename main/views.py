@@ -105,8 +105,8 @@ def appinfo(request):
 
         from_page = request.POST.get("from",None)
         if from_page is not None:
-            if from_page == "prices"
-            c['return_page'] = "/prices/"
+            if from_page == "prices":
+                c['return_page'] = "/prices/"
 
 
         application_id = request.POST['software']
