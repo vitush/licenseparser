@@ -18,12 +18,28 @@
             document.getElementById("saveapp").submit();
 
         }
+        function suggestions_change(en) {
+
+
+            if (en == 0 ){
+                document.getElementById('suggestions_id').value = '1';
+            }else{
+                document.getElementById('suggestions_id').value = '0';
+            }
+            document.getElementById('action_id').name = "action";
+            document.getElementById('action_id').value = "reload";
+            document.getElementById("saveapp").action = "/appinfo/";
+            document.getElementById("saveapp").submit();
+
+
+        }
 
 </script>
 
 
 <form id="saveapp" action="{{ return_page }}" method="post" name="save"> {% csrf_token %}
 <input name="software" value="{{ app_id }}" type="hidden" >
+<input id="suggestions_id" name="suggestions_id" value="{{ suggestions_id}}" type="hidden" >
 
 <style type="text/css">
 .appname
@@ -34,8 +50,6 @@
 
 </style>
 
-
-
         <div class="row">
                <div class="span3">
                   <h4>Application Info:</h4>
@@ -45,6 +59,15 @@
                     <a id="softpedia_url" href="http://www.softpedia.com/dyn-search.php?search_term={{ app_name_short }}
                     " target="_blank">Softpedia</a>
                 </div>
+               <div class="span3 offset6" id="suggestions_softpedia_btn_id"
+                    onclick="suggestions_change({{ suggestions_enable }});">
+                    <button type="button" class="btn btn-small
+                    {% if suggestions_enable == '0' %} btn-primary ">Enable suggestions
+                    {% else %}
+                            ">Disable suggestions
+                    {% endif %}
+                   </button>
+               </div>
         </div>
 
 
@@ -139,6 +162,7 @@
 
 
 {% block page_content_softpedia %}
+ {% if suggestions_enable == 1  %}
     {%  if softpedia_content|length > 0 %}
     <div class="row">
     <hr>
@@ -156,5 +180,6 @@
            {{ softpedia_content|safe }}
     </div>
     {% endif %}
+  {% endif %}
 {% endblock %}
 

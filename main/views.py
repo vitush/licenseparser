@@ -104,9 +104,19 @@ def appinfo(request):
     c.update(csrf(request))
     c['return_page'] = "/manage/"
 
+    suggestions_enable = request.session.get('suggestions_enable', 0)
+
 
     if request.method == 'POST':
         application_id = request.POST['software']
+
+        # change suggestion status
+        suggestions_id = request.POST.get("suggestions_id",None)
+        if suggestions_id  is not None:
+            suggestions_enable = suggestions_id
+            request.session["suggestions_enable"] = suggestions_enable
+
+
 
         application = models.Application.objects.get(id=application_id)
         publisher = models.Publisher.objects.get(name=application.publisher)
@@ -160,6 +170,8 @@ def appinfo(request):
                                 "http://www.softpedia.com/dyn-search.php?search_term=%s"%name_short)
 
 
+        c["suggestions_enable"] = suggestions_enable
+
 
     return render_to_response('appinfo.html',c)
 
@@ -179,7 +191,6 @@ def manage(request):
 
 
     if request.method == 'POST':
-        action = request.POST.get('action',None)
 
         action = request.POST.get("action",None)
 
@@ -195,18 +206,18 @@ def manage(request):
 
         actions = {"Mark Free":1,"Mark Licensed":2,"Mark Unknown":0}
 
-        for sw_id in sw_list:
-            apps = models.Application.objects.filter(id=sw_id)
-            for app in apps:
-                app.license = actions[action]
-                if new_comment  is not None:
-                    app.comment = new_comment
-                if app.license == 1 :
-                    app.cost = 0
-                elif new_cost is not None:
-                    app.cost = new_cost
-                app.save()
-
+        if action != "reload":
+            for sw_id in sw_list:
+                apps = models.Application.objects.filter(id=sw_id)
+                for app in apps:
+                    app.license = actions[action]
+                    if new_comment  is not None:
+                        app.comment = new_comment
+                    if app.license == 1 :
+                        app.cost = 0
+                    elif new_cost is not None:
+                        app.cost = new_cost
+                    app.save()
 
     c['unknown_software'] = models.Application.objects.filter(license=0)
     c['free_software'] = models.Application.objects.filter(license=1)
