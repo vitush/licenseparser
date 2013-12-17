@@ -49,10 +49,12 @@ table {
 
             <td title="{%  for pc in sw.computer_set.all %}
                     {{ pc.name }}{% endfor %}">
-                {%  if sw.computer_set.all|length  > 0  %}
-                   <span class="label label-warning">( {{ sw.computer_set.all|length }} )</span>
-             {% else %}
-                    <span class="label">( {{ sw.computer_set.all|length }} )</span>
+                {%  if sw.computer_set.all|length  == 0  %}
+                   <span class="label">( {{ sw.computer_set.all|length }} )</span>
+                {% elif sw.computer_set.all|length  < 10 %}
+                    <span class="label label-warning">( {{ sw.computer_set.all|length }} )</span>
+                {% alse %}
+                    <span class="label label-warning">( {{ sw.computer_set.all|length }} )</span>
                 {% endif %}</td>
 
         </tr>
