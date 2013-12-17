@@ -59,15 +59,6 @@
                     <a id="softpedia_url" href="http://www.softpedia.com/dyn-search.php?search_term={{ app_name_short }}
                     " target="_blank">Softpedia</a>
                 </div>
-               <div class="span3 offset6" id="suggestions_softpedia_btn_id"
-                    onclick="suggestions_change({{ suggestions_enable }});">
-                    <button type="button" class="btn btn-small
-                    {% if suggestions_enable == '0' %} btn-primary ">Enable suggestions
-                    {% else %}
-                            ">Disable suggestions
-                    {% endif %}
-                   </button>
-               </div>
         </div>
 
 
@@ -137,7 +128,15 @@
                     <input name="action" type="submit" value="Mark Licensed" />
                     <input  type="hidden" id="action_id" name="action1" value="Mark Free" />
                 </div>
-
+                <div class="span3 offset6" id="suggestions_softpedia_btn_id"
+                    onclick="suggestions_change({{ suggestions_enable }});">
+                    <button type="button" class="btn btn-small
+                    {% if suggestions_enable == '0' %} btn-primary ">Enable suggestions
+                    {% else %}
+                            ">Disable suggestions
+                    {% endif %}
+                   </button>
+                </div>
             </div>
         </div>
         <div class="span3">
@@ -162,7 +161,7 @@
 
 
 {% block page_content_softpedia %}
- {% if suggestions_enable == 1  %}
+{% if suggestions_enable == '1' %}
     {%  if softpedia_content|length > 0 %}
     <div class="row">
     <hr>
@@ -180,6 +179,7 @@
            {{ softpedia_content|safe }}
     </div>
     {% endif %}
-  {% endif %}
+{% endif %}
+
 {% endblock %}
 
