@@ -17,7 +17,7 @@
 table {
     table-layout: fixed;
     word-wrap: break-word;
-    font-size:10px;
+    font-size:20px;
 }
 .table th.rightCell,
 .table td.rightCell {
@@ -42,7 +42,7 @@ table {
         <tr ondblclick="swinfo({{ sw.id }});" >
             <td class="rightCell" > {{ sw.id }} </td>
             <td> {{ sw.name }} </td>
-            <td class="rightCell" > {{ sw.cost }}</td>
+            <td class="rightCell" > {{ sw.cost }} UAH</td>
             <td>
                 {%  if sw.comment|length > 0 %}
                     <a target="_blank" href="{{ sw.comment }}" title="{{ sw.comment }}">
