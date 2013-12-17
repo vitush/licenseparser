@@ -61,6 +61,11 @@ def index(request):
     c.update(csrf(request))
     return render_to_response('index.html',c)
 
+def update(request):
+    c = {}
+    c.update(csrf(request))
+    return render_to_response('update.html',c)
+
 def search(request):
     c = {}
     c.update(csrf(request))
