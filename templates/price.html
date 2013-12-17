@@ -35,7 +35,7 @@ table {
  <th>Application</th>
  <th class="rightCell" width="10%">Cost<br>(UAH)</th>
  <th width="20%">Comment</th>
- <th class="rightCell"> Computers </th>
+ <th class="rightCell" width="10%"> Computers </th>
 </thead>
 <tbody>
     {% for sw in licensed_software %}
@@ -53,9 +53,7 @@ table {
                    <span class="label label-warning">( {{ sw.computer_set.all|length }} )</span>
              {% else %}
                     <span class="label">( {{ sw.computer_set.all|length }} )</span>
-                {% endif %}
-
-            </td>
+                {% endif %}</td>
 
         </tr>
     {%  endfor %}
