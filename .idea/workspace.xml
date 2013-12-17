@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0390a5a0-99cb-4d99-9a99-40cbfe6dec10" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/update.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/licenses/urls.py" afterPath="$PROJECT_DIR$/licenses/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/views.py" afterPath="$PROJECT_DIR$/main/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="a404b25d-6ec1-41eb-868f-7c8799b765b0" name="New changelist" comment="" />
@@ -33,10 +30,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="10" selection-start="1515" selection-end="1515" vertical-scroll-proportion="0.81632656" vertical-offset="300" max-vertical-offset="3990">
+            <state line="63" column="10" selection-start="1515" selection-end="1515" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="3990">
               <folding />
             </state>
           </provider>
@@ -96,10 +93,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="373" selection-end="517" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="435">
+            <state line="9" column="0" selection-start="131" selection-end="131" vertical-scroll-proportion="0.2393617" vertical-offset="0" max-vertical-offset="564">
               <folding />
             </state>
           </provider>
@@ -150,13 +147,13 @@
         <option value="$PROJECT_DIR$/main/models.py" />
         <option value="$PROJECT_DIR$/templates/manage.html" />
         <option value="$PROJECT_DIR$/templates/search.html" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/appinfo.html" />
         <option value="$PROJECT_DIR$/templates/price.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/licenses/urls.py" />
         <option value="$PROJECT_DIR$/templates/update.html" />
         <option value="$PROJECT_DIR$/main/views.py" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
       </list>
     </option>
   </component>
@@ -1002,7 +999,11 @@
       <created>1387273410723</created>
       <updated>1387273410723</updated>
     </task>
-    <option name="localTasksCounter" value="115" />
+    <task id="LOCAL-00115" summary="added menu">
+      <created>1387274710289</created>
+      <updated>1387274710289</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1057,7 +1058,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Added start-stop script" />
     <MESSAGE value="Unicode changes" />
     <MESSAGE value="added status check" />
     <MESSAGE value="&#10;" />
@@ -1082,7 +1082,8 @@
     <MESSAGE value="show prices" />
     <MESSAGE value="added prices page" />
     <MESSAGE value="added titles" />
-    <option name="LAST_COMMIT_MESSAGE" value="added titles" />
+    <MESSAGE value="added menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="added menu" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1185,13 +1186,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="373" selection-end="517" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="435">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/update.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="14" selection-start="213" selection-end="213" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="240">
@@ -1201,7 +1195,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="10" selection-start="1515" selection-end="1515" vertical-scroll-proportion="0.81632656" vertical-offset="300" max-vertical-offset="3990">
+        <state line="63" column="10" selection-start="1515" selection-end="1515" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="3990">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="131" selection-end="131" vertical-scroll-proportion="0.2393617" vertical-offset="0" max-vertical-offset="564">
           <folding />
         </state>
       </provider>
