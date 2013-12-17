@@ -60,7 +60,7 @@
       <file leaf-file-name="price.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/price.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="20" selection-start="1820" selection-end="1820" vertical-scroll-proportion="0.86702126" vertical-offset="336" max-vertical-offset="1125">
+            <state line="56" column="54" selection-start="1881" selection-end="1881" vertical-scroll-proportion="0.89361703" vertical-offset="336" max-vertical-offset="1125">
               <folding />
             </state>
           </provider>
@@ -960,7 +960,11 @@
       <created>1387272999406</created>
       <updated>1387272999406</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="added titles">
+      <created>1387273031781</created>
+      <updated>1387273031781</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1159,7 +1163,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/price.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="20" selection-start="1820" selection-end="1820" vertical-scroll-proportion="0.86702126" vertical-offset="336" max-vertical-offset="1125">
+        <state line="56" column="54" selection-start="1881" selection-end="1881" vertical-scroll-proportion="0.89361703" vertical-offset="336" max-vertical-offset="1125">
           <folding />
         </state>
       </provider>
