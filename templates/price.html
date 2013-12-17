@@ -3,43 +3,65 @@
 {% block page_content %}
 
     <script>
-        function swinfo(form_id) {
+        function swinfo(sw_id) {
 
-            document.getElementById(form_id).action='/appinfo/';
-            document.getElementById(form_id).submit();
+            document.getElementById("form_software_id").action='/appinfo/';
+            document.getElementById("software").value = sw_id;
+            document.getElementById("form_software_id").submit();
 
         }
     </script>
 
 <style type="text/css">
 
-.selectwidthauto1
-{
-     width:600px !important;
+table {
+    table-layout: fixed;
+    word-wrap: break-word;
+    font-size:10px;
+}
+.table th.rightCell,
+.table td.rightCell {
+  text-align: right;
 }
 </style>
 
-
-
-<div class="span10">
+<div class="span12">
 <h5>Software require license (<b>{{ licensed_software|length }}</b>)</h5>
-        <form id="licensed_software_id"  action="/manage/" method="get">  {% csrf_token %}
-            <input type="hidden" name="from_page" value="prices">
-            <select name="software" multiple="true" size="20" title="Need License" class="selectwidthauto1">
-                {% for sw in licensed_software %}
-                   <option value="{{sw.id}}"
-                           ondblclick="swinfo('licensed_software_id');"
-                           title="{{sw}} ({{sw.publisher}}) {% if sw.cost > 0 %} [ {{ sw.cost }} UAH ] {% endif %}" >
+<form id="form_software_id"  action="/appinfo/" method="post">  {% csrf_token %}
+<input type="hidden" name="software" id="software" value="0">
+
+<table class="table">
+<thead>
+ <th class="rightCell" width="40">ID</th>
+ <th>Application</th>
+ <th class="rightCell" width="40">Cost<br>(UAH)</th>
+ <th width="20%">Comment</th>
+</thead>
+<tbody>
+    {% for sw in licensed_software %}
+        <tr ondblclick="swinfo({{ sw.id }});" >
+            <td class="rightCell" > {{ sw.id }} </td>
+            <td> {{ sw.name }} </td>
+            <td class="rightCell" > {{ sw.cost }}</td>
+            <td>
+                {%  if sw.comment|length > 0 %}
+                    <a target="_blank" href="{{ sw.comment }}" title="{{ sw.comment }}">
+                    {{ sw.comment|slice:":20" }} ...</a></td>
+                {% endif %}
+        </tr>
+
+       <option value="{{sw.id}}"
+               ondblclick="swinfo('licensed_software_id');"
+               title="{{sw}} ({{sw.publisher}}) {% if sw.cost > 0 %} [ {{ sw.cost }} UAH ] {% endif %}" >
 
 
-                        {% if sw.cost > 0 %} [ {{ sw.cost }} UAH ] {% endif %} {{sw}}</option>
-                {% endfor %}
-            </select>
+            {% if sw.cost > 0 %} [ {{ sw.cost }} UAH ] {% endif %} {{sw}}</option>
+    {% endfor %}
 
-        <p>
-        <input name="action" type="submit" value="Cancel" />
-        </p>
-           </form>
+</tbody>
+</table>
+
+</form>
 </div>
 
 

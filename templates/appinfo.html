@@ -6,7 +6,7 @@
 {% block page_content %}
 
 
-<script>
+<script xmlns="http://www.w3.org/1999/html">
 
 
         function softpedia() {
@@ -28,7 +28,7 @@
 <style type="text/css">
 .appname
 {
-     width:600px !important;
+     width:500px !important;
 }
     table{ font-size:0.8em; font-weight:bold; font-family:helvetica,sans-serif; }
 
@@ -36,64 +36,101 @@
 
 
 
-    <h4>Application Info:</h4>
-    <div class="span8">
-
-
-
-            <input name="software" value="{{ app_id }}" type="hidden" >
-
-
-        <div class="span1">
-            Name: <br><br>
-            Version: <br><br>
-            Publisher: <br><br>
-            License Type: <br><br>
-            Cost: <br><br>
-            Installation: <br><br>
-
-
+        <div class="row">
+               <div class="span3">
+                  <h4>Application Info:</h4>
+                </div>
+               <div class="span4">
+                    <a href="http://google.com/search?q={{ app_name_short_vendor}}" target="_blank">Google</a>  |
+                    <a id="softpedia_url" href="http://www.softpedia.com/dyn-search.php?search_term={{ app_name_short }}
+                    " target="_blank">Softpedia</a>
+                </div>
         </div>
 
+
+        <div class="span6">
+            <br>
+            <div class="row">
+                <div class="span1">
+                    Name
+                </div>
+                <div class="span3">
+                    <input name="name" readonly value="{{ app_name }}" class="appname">
+                </div>
+            </div>
+            <div class="row">
+                <div class="span1">
+                    Path
+                </div>
+                <div class="span3">
+                    <input name="name" readonly value="{{ app_installation}}" >
+                </div>
+            </div>
+            <div class="row">
+                <div class="span1">
+                    Version
+                </div>
+                <div class="span3">
+                    <input name="name" readonly value="{{ app_version}}" >
+                </div>
+            </div>
+            <div class="row">
+                <div class="span1">
+                    Publisher
+                </div>
+                <div class="span3">
+                    <input name="name" readonly value="{{ app_publisher}}" >
+                </div>
+            </div>
+            <div class="row">
+                <div class="span1">
+                    License
+                </div>
+                <div class="span3">
+                    <input name="name" readonly value="{{ app_license}}" >
+                </div>
+            </div>
+            <div class="row">
+                <div class="span1">
+                    cost
+                </div>
+                <div class="span3">
+                    <input name="name"          value="{{ app_cost}}" >
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="span1">
+                    Comment
+                </div>
+                <div class="span3">
+                    <textarea name="comment"  rows="4">{{ app_comment }}</textarea>
+                </div>
+            </div>
+            <div class="row">
+                <br>
+                <div class="span4">
+                    <input name="action" type="submit" value="Mark Free"  />
+                    <input name="action" type="submit" value="Mark Licensed" />
+                    <input  type="hidden" id="action_id" name="action1" value="Mark Free" />
+                </div>
+
+            </div>
+        </div>
         <div class="span3">
-            <input name="name"      readonly value="{{ app_name }}" class="appname">
-               <a href="http://google.com/search?q={{ app_name_short_vendor}}" target="_blank">Search on Google</a>  |
-               <a id="softpedia_url" href="http://www.softpedia.com/dyn-search.php?search_term={{ app_name_short }}" target="_blank">Search on Softpedia</a>
-
-                <br><br>
-            <input name="version"   readonly value="{{ app_version }}" class="appname"><br><br>
-            <input name="publisher" readonly value="{{ app_publisher }}" class="appname"><br><br>
-            <input name="license"   readonly value="{{ app_license }}" class="appname"><br><br>
-            <input name="cost"               value="{{ app_cost }}" class="appname"><br><br>
-            <input name="installation" readonly value="{{ app_installation }}" class="appname" ><br><br>
-
-            <p> Comment:&nbsp;<br>
-                <textarea  id="comment"  type="text" cols="40" name="comment">{{ app_comment }}</textarea>
-            </p>
-               <p>
-                <input name="action" type="submit" value="Mark Free"  />
-                <input name="action" type="submit" value="Mark Licensed" />
-                <input  type="hidden" id="action_id" name="action1" value="Mark Free" />
-
-               </p>
-
-        </div>
-
-
-    </div>
-    <div class="span4">
-
-            <p> Installed on :&nbsp; <br>
+            <br><br><br>
+             <div class="row">
+                 Installed on :&nbsp;
+             </div>
+             <div class="row">
                 <select name="pclist" size="10"">
                     {% for pc in pclist %}
                        <option value="{{pc.id}}" >{{pc.name}}</option>
                     {% endfor %}
                 </select>
-            </p>
+             </div>
 
-    </div>
-
-
+        </div>
 
 </form>
 

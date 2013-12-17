@@ -99,9 +99,8 @@ def appinfo(request):
     c.update(csrf(request))
     c['return_page'] = "/manage/"
 
+
     if request.method == 'POST':
-
-
         application_id = request.POST['software']
 
         application = models.Application.objects.get(id=application_id)
