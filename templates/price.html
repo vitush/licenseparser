@@ -32,32 +32,33 @@ table {
 
 <table class="table">
 <thead>
- <th class="rightCell" width="40">ID</th>
  <th>Application</th>
  <th class="rightCell" width="10%">Cost<br>(UAH)</th>
  <th width="20%">Comment</th>
+ <th class="rightCell"> Computers </th>
 </thead>
 <tbody>
     {% for sw in licensed_software %}
         <tr ondblclick="swinfo({{ sw.id }});" >
-            <td class="rightCell" > {{ sw.id }} </td>
-            <td> {{ sw.name }} </td>
+            <td title="{{ sw.name }}"> {{ sw.name }} </td>
             <td class="rightCell" > {{ sw.cost }} UAH</td>
-            <td>
-                {%  if sw.comment|length > 0 %}
+            <td>{%  if sw.comment|length > 0 %}
                     <a target="_blank" href="{{ sw.comment }}" title="{{ sw.comment }}">
-                    {{ sw.comment|slice:":20" }} ...</a></td>
+                    {{ sw.comment|slice:":20" }} ...</a>
+                {% endif %}</td>
+
+            <td title="{%  for pc in sw.computer_set.all %}
+                    {{ pc.name }}{% endfor %}">
+                {%  if sw.computer_set.all|length  > 0  %}
+                   <span class="label label-warning">( {{ sw.computer_set.all|length }} )</span>
+             {% else %}
+                    <span class="label">( {{ sw.computer_set.all|length }} )</span>
                 {% endif %}
+
+            </td>
+
         </tr>
-
-       <option value="{{sw.id}}"
-               ondblclick="swinfo('licensed_software_id');"
-               title="{{sw}} ({{sw.publisher}}) {% if sw.cost > 0 %} [ {{ sw.cost }} UAH ] {% endif %}" >
-
-
-            {% if sw.cost > 0 %} [ {{ sw.cost }} UAH ] {% endif %} {{sw}}</option>
-    {% endfor %}
-
+    {%  endfor %}
 </tbody>
 </table>
 

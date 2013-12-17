@@ -33,7 +33,7 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="0" selection-start="2817" selection-end="2817" vertical-scroll-proportion="0.0" vertical-offset="1048" max-vertical-offset="3915">
+            <state line="146" column="46" selection-start="4360" selection-end="4360" vertical-scroll-proportion="0.0" vertical-offset="1867" max-vertical-offset="3915">
               <folding />
             </state>
           </provider>
@@ -60,7 +60,7 @@
       <file leaf-file-name="price.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/price.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="33" selection-start="881" selection-end="881" vertical-scroll-proportion="0.31914893" vertical-offset="360" max-vertical-offset="1110">
+            <state line="34" column="0" selection-start="784" selection-end="784" vertical-scroll-proportion="0.2287234" vertical-offset="381" max-vertical-offset="1125">
               <folding />
             </state>
           </provider>
@@ -944,7 +944,11 @@
       <created>1387271452628</created>
       <updated>1387271452628</updated>
     </task>
-    <option name="localTasksCounter" value="108" />
+    <task id="LOCAL-00108" summary="added prices page">
+      <created>1387271485680</created>
+      <updated>1387271485681</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1120,9 +1124,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/manage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="64" selection-start="3150" selection-end="3150" vertical-scroll-proportion="-11.0" vertical-offset="981" max-vertical-offset="1545">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="0" selection-start="2817" selection-end="2817" vertical-scroll-proportion="0.0" vertical-offset="1048" max-vertical-offset="3915">
+        <state line="146" column="46" selection-start="4360" selection-end="4360" vertical-scroll-proportion="0.0" vertical-offset="1867" max-vertical-offset="3915">
           <folding />
         </state>
       </provider>
@@ -1134,16 +1145,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/manage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="64" selection-start="3150" selection-end="3150" vertical-scroll-proportion="-11.0" vertical-offset="981" max-vertical-offset="1545">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/price.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="33" selection-start="881" selection-end="881" vertical-scroll-proportion="0.31914893" vertical-offset="360" max-vertical-offset="1110">
+        <state line="34" column="0" selection-start="784" selection-end="784" vertical-scroll-proportion="0.2287234" vertical-offset="381" max-vertical-offset="1125">
           <folding />
         </state>
       </provider>
