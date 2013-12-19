@@ -13,7 +13,9 @@
         License:&nbsp;
         <select name="license_id" id="license_id">
             {% for lc in licenses %}
-                <option value="{{lc.id}}" {% if lc.id == licenses_selected %} selected {% endif %} >{{lc.name}}</option>
+                <option value="{{lc.id}}" {% if lc.id == licenses_selected %} selected {% endif %} >{{lc.name}}
+                ( {{ lc.computer_set.all|length }} )
+                </option>
             {% endfor %}
         </select><br>
         <input class="btn" name="action" type="submit" value="Add"  >

@@ -61,6 +61,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="price.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/price.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="58" selection-start="1094" selection-end="1094" vertical-scroll-proportion="-13.125" vertical-offset="315" max-vertical-offset="1125">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -73,7 +82,7 @@
       <file leaf-file-name="computers.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/computers.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="21" selection-start="500" selection-end="500" vertical-scroll-proportion="0.3923077" vertical-offset="0" max-vertical-offset="1005">
+            <state line="16" column="48" selection-start="493" selection-end="493" vertical-scroll-proportion="0.36923078" vertical-offset="0" max-vertical-offset="1035">
               <folding />
             </state>
           </provider>
@@ -82,7 +91,7 @@
       <file leaf-file-name="licenses.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/licenses.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="116" selection-start="2439" selection-end="2439" vertical-scroll-proportion="-8.275862" vertical-offset="720" max-vertical-offset="1455">
+            <state line="80" column="116" selection-start="2439" selection-end="2439" vertical-scroll-proportion="-13.706897" vertical-offset="405" max-vertical-offset="1455">
               <folding />
             </state>
           </provider>
@@ -1012,7 +1021,11 @@
       <created>1387450827651</created>
       <updated>1387450827651</updated>
     </task>
-    <option name="localTasksCounter" value="124" />
+    <task id="LOCAL-00124" summary="Release 1">
+      <created>1387451949130</created>
+      <updated>1387451949130</updated>
+    </task>
+    <option name="localTasksCounter" value="125" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1194,13 +1207,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/price.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="45" selection-start="213" selection-end="221" vertical-scroll-proportion="0.32" vertical-offset="0" max-vertical-offset="1125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="75" column="12" selection-start="2164" selection-end="2172" vertical-scroll-proportion="0.0" vertical-offset="536" max-vertical-offset="1335">
@@ -1226,16 +1232,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/price.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="58" selection-start="1094" selection-end="1094" vertical-scroll-proportion="-13.125" vertical-offset="315" max-vertical-offset="1125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/licenses.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="116" selection-start="2439" selection-end="2439" vertical-scroll-proportion="-8.275862" vertical-offset="720" max-vertical-offset="1455">
+        <state line="80" column="116" selection-start="2439" selection-end="2439" vertical-scroll-proportion="-13.706897" vertical-offset="405" max-vertical-offset="1455">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/computers.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="21" selection-start="500" selection-end="500" vertical-scroll-proportion="0.3923077" vertical-offset="0" max-vertical-offset="1005">
+        <state line="16" column="48" selection-start="493" selection-end="493" vertical-scroll-proportion="0.36923078" vertical-offset="0" max-vertical-offset="1035">
           <folding />
         </state>
       </provider>
