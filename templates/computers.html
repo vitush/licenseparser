@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+
+
+
+<div class="span12">
+<h5>Computers</h5>
+<form id="form_computers_id"  action="/computers/" method="post">  {% csrf_token %}
+
+<div class="row">
+    <div class="span4">
+        License:&nbsp;
+        <select name="license_id" id="license_id">
+            {% for lc in licenses %}
+                <option value="{{lc.id}}" {% if lc.id == licenses_selected %} selected {% endif %} >{{lc.name}}</option>
+            {% endfor %}
+        </select>
+        <input class="btn" name="action" type="submit" value="Add"  >
+        <input class="btn" name="action" type="submit" value="Remove" >
+
+    </div>
+    <div class="span3">
+        Computers:&nbsp;
+        <select id="computer_id" name="computer_id" multiple="true" size="6" >
+            {% for pc in computers%}
+               <option value="{{pc.id}}" title="{{pc.owner}} " >{{pc.name}}</option>
+            {% endfor %}
+        </select>
+
+    </div>
+    <hr>
+</div>
+<div class="row">
+    <table class="table">
+    <thead>
+     <th>Computer</th>
+     <th>Applayed Licenses</th>
+    </thead>
+    <tbody>
+        {% for comp  in computers %}
+            <tr>
+                <td title="{{ comp.name }}"> {{ comp.name }} </td>
+                <td >
+                    {% for lc in comp.licenses.all %}
+                        <p title="License owner: {{ lc.owner }}">{{ lc.name  }}</p>
+                    {% endfor %}
+
+                </td>
+            </tr>
+        {%  endfor %}
+    </tbody>
+    </table>
+</div>
+
+
+
+</form>
+</div>
+
+
+{% endblock %}

@@ -66,13 +66,7 @@ class myThread (threading.Thread):
             else:
                 pc_owner = dom.getElementsByTagName('User_name')[0].firstChild.data
 
-            #print("pc-name %s"%pc_name)
-            #computer = models.Computer.objects.get(name=pc_name, owner=pc_owner)
-            #print("computer %s"%computer)
 
-            #if computer is not None:
-            #    computer.delete()
-                #print("Deleted %s"%computer)
 
             computer = models.Computer.objects.create(name=pc_name, owner=pc_owner)
             if computer is not None:
@@ -81,12 +75,6 @@ class myThread (threading.Thread):
 
 
 
-            #computer, created = models.Computer.objects.get_or_create(name=pc_name, owner=pc_owner)
-            #if created:
-            #    print ("New Computer added to Database : %s"% pc_name)
-            #    computer.save()
-
-            # Parsing installed Software
             installed_sw_container = dom.getElementsByTagName('InstalledSoftware')
             if installed_sw_container is None:
                 return False
@@ -136,8 +124,8 @@ class myThread (threading.Thread):
                      ver = element[0].firstChild.data
                      #ver = unicodedata.normalize('NFKD', element[0].firstChild.data).encode('ascii','ignore')
                      sw["version"] = element[0].firstChild.data
-                     sw["name"] += " - "
-                     sw["name"] += element[0].firstChild.data
+                     #sw["name"] += " - "
+                     #sw["name"] += element[0].firstChild.data
 
 
         element = doc.getElementsByTagName('Publisher')

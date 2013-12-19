@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+
+    <script>
+        function license_change() {
+
+            //var e = document.getElementById("licenses");
+            //var license_id = e.options[e.selectedIndex].value;
+
+            //document.getElementById("licenses_id").value='changelicense';
+            document.getElementById("action_id").value='changelicense';
+            document.getElementById("form_licenses").submit();
+        }
+
+
+    </script>
+
+<form id="form_licenses"  action="/licenses/" method="post">  {% csrf_token %}
+<div class="span4">
+<h5>License </h5>
+
+
+        <input type="hidden" id="action_id" name="action" >
+       <div class="row">
+            <p>
+                License:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <select name="licenses" id="licenses" onchange="license_change();">
+                    {% for lc in licenses %}
+                        <option value="{{lc.id}}" {% if lc.id == licenses_selected_id  %} selected {% endif %}>{{lc.name}}</option>
+                    {% endfor %}
+                </select></p>
+
+        </div>
+
+        <div class="row ">
+            New License:&nbsp;
+            <input type="text" name="license_name" id="license_name_id" value=""> <br>
+            License owner:&nbsp;
+            <input type="text" name="license_owner" id="license_owner_id" value=""> <br>
+        </div>
+        <br><br>
+        <div class="row align-right">
+            <input class="btn " type="submit" name="action" value="Add License"> <br>
+            <input class="btn " type="submit" name="action" value="Remove License"> <br>
+        </div>
+
+
+</div>
+
+<div class="span4">
+<h5>Include</h5>
+
+            <select id="applications_included" name="applications_included"  multiple="true" size="10">
+                {% for app in applications_included %}
+                   <option value="{{app.id}}"
+                           title="{{app.name}}">{{app.name}}</option>
+                {% endfor %}
+            </select>
+         <input class="btn "  name="action"   type="submit" value="Remove Software" onclick="remove_app();"> <br>
+
+</div>
+
+<div class="span4">
+<h5>Not Include</h5>
+
+            <select id="software_licensed" name="software_licensed" multiple="true" size="10">
+                {% for app in software_licensed %}
+                   <option value="{{app.id}}"
+                           title="{{app.name}}">{{app.name}}</option>
+                {% endfor %}
+            </select>
+         <input class="btn "  name="action"  type="submit" value="Add Software" "> <br>
+
+</div>
+</form>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+
+    <table class="table">
+        <thead>
+         <th> Old name</th>
+         <th> Naw name</th>
+        </thead>
+        <tbody>
+            {% for app in new  %}
+            <tr>
+                <td>
+                    {{ app.name }}
+                </td>
+                <td>
+                    {{ app.name1 }}
+                </td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+
+{% endblock %}

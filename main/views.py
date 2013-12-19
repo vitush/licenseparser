@@ -11,11 +11,10 @@ from licenses import settings
 import urllib
 from bs4 import BeautifulSoup
 import re
+import string
 
 def softpedia_search(url):
-
     res = ""
-
     try:
         f = urllib.urlopen(url)
         html_doc = f.read()
@@ -29,7 +28,42 @@ def softpedia_search(url):
 
     return res
 
+def computers(request):
+    c = {}
+    c.update(csrf(request))
 
+    if request.method == 'POST':
+        action = request.POST.get('action',None)
+        license_id = request.POST.get('license_id',None)
+        computer_id_list = request.POST.getlist('computer_id',None)
+
+        if computer_id_list is None or license_id is None:
+            return Http404()
+
+        c['licenses_selected'] = int(license_id)
+
+
+        license  = models.Licenses.objects.get(id=license_id)
+
+        if license is None:
+            return Http404()
+
+
+        if action == "Add":
+            for comp_id in computer_id_list:
+                computer = models.Computer.objects.get(id=comp_id)
+                computer.licenses.add(license)
+                print ("Add to comp: %s, license: %s"%(comp_id,license_id))
+        if action == "Remove":
+            for comp_id in computer_id_list:
+                computer = models.Computer.objects.get(id=comp_id)
+                computer.licenses.remove(license)
+                print ("Removed from comp: %s, license: %s"%(comp_id,license_id))
+
+    c['computers'] = models.Computer.objects.all()
+    c['licenses'] =  models.Licenses.objects.all()
+
+    return render_to_response('computers.html',c)
 
 def reload(request):
     c = {}
@@ -55,6 +89,101 @@ def load(request):
         return render_to_response('index.html',c)
     else:
         return render_to_response('load.html',c)
+
+def licenses(request):
+    c = {}
+    c.update(csrf(request))
+
+    license_id = 1
+
+    if request.method == 'POST':
+
+        action = request.POST.get('action',None)
+        license_id = int(request.POST.get('licenses','1'))
+        license_owner = request.POST.get('license_owner','')
+        print ("action = %s " % action)
+
+        c['licenses_selected_id'] = license_id
+        try:
+            license = models.Licenses.objects.get(id=license_id)
+        except:
+            license = None
+
+        if action is not None:
+            if action == "Add License":
+                print("Add License")
+                license_name = request.POST.get('license_name',None)
+                if license_name is not None:
+                    license = models.Licenses.objects.create(name=license_name,owner=license_owner)
+                    license.save()
+
+        if action == "Remove License":
+            license = models.Licenses.objects.get(id=license_id)
+            license.delete()
+
+        elif action == "Add Software":
+            for app_id in request.POST.getlist('software_licensed'):
+                app = models.Application.objects.get(id=app_id)
+                license.applications.add(app)
+                print("Added %s"% app.name)
+
+        elif action == "Remove Software":
+            for app_id in request.POST.getlist('applications_included'):
+                app = models.Application.objects.get(id=app_id)
+                license.applications.remove(app)
+                print("Removed %s"% app.name)
+
+
+    try:
+        license = models.Licenses.objects.get(id=license_id)
+    except:
+        license = None
+
+
+    if license is not None:
+        print("License: %s"% license)
+
+        included_apps = license.applications.all()
+        print(included_apps )
+
+        if len(included_apps) > 0 :
+            print("Getting filtered")
+            c['software_licensed'] = models.Application.objects.exclude(id__in=included_apps).filter(license=2)
+            #c['software_licensed'] = models.Application.objects.filter(license=2)
+        else:
+            print("Getting All")
+            c['software_licensed'] =  models.Application.objects.filter(license=2)
+
+        c['applications_included'] = included_apps
+
+
+    c['licenses_selected_id'] = license_id
+    c['licenses'] = models.Licenses.objects.all()
+
+    return render_to_response('licenses.html',c)
+
+
+def z(request):
+    c = {}
+    c.update(csrf(request))
+
+    apps = models.Application.objects.all()
+
+    for app in apps:
+        apindex = +1
+        namedict = {}
+        namedict['name'] = app.name
+        namedict['name1'] = app.name
+        app.name1 = app.name
+        if app.version != "Unknown":
+            ind = string.find(app.name," - "+app.version)
+            if ind >= 0 :
+                app.name1 = app.name[0:ind]
+
+    c['all'] = models.Application.objects.all()
+    c['new'] = apps
+
+    return render_to_response('z.html',c)
 
 def index(request):
     c = {}
@@ -121,15 +250,6 @@ def appinfo(request):
         application = models.Application.objects.get(id=application_id)
         publisher = models.Publisher.objects.get(name=application.publisher)
 
-        # Save Data
-        #act = request.POST.get('action', None)
-        #if act == "save":
-        #    application.comment = request.POST['comment']
-        #    application.cost= request.POST['cost']
-        #    if int(application.cost) > 0:
-        #        application.license = 2
-        #    application.save()
-        #    return HttpResponseRedirect("/manage/")
 
         import re
         name_full = application.name
@@ -229,8 +349,26 @@ def write_pc(computer,writer,licensed_only=False):
         writer.writerow(['',''])
         writer.writerow(['',''])
         writer.writerow([computer])
+
+        pc_licenses = computer.licenses.all()
+        print("pc   = %s"% computer.name )
+        print("pc_licenses  = %s"% pc_licenses )
+
+        if len(computer.licenses.all()) > 0:
+            pc_licenses1 = [ str(x) for x in pc_licenses ]
+            pc_licenses2 = ", ".join(pc_licenses1)
+            #print("pc_licenses1  = %s"% pc_licenses1 )
+            #print("pc_licenses2  = %s"% pc_licenses2 )
+
+            writer.writerow(['Applied Licenses', pc_licenses2 ])
+
         pc_cost_sum=0
         for app in computer.applications.all():
+            license_applied = ",".join( [ str(x.name) for x in app.licenses_set.all() ])
+
+
+            print (app.licenses_set.all())
+
             if licensed_only and app.license != 2:
                 pass
             else:
@@ -239,9 +377,11 @@ def write_pc(computer,writer,licensed_only=False):
                                  app.get_name(),
                                  publ.get_publisher(),
                                  app.get_license_txt(),
+                                 license_applied,
                                  str(app.get_cost()),
                                  '',
                                  app.get_comment()
+
                 ])
                 pc_cost_sum += app.get_cost()
 
@@ -266,7 +406,7 @@ def download(request):
         response['Content-Disposition'] = 'attachment; filename="software.csv"'
         writer = csv.writer(response)
         writer.writerow(['',''])
-        writer.writerow(['Computer','Software', 'Publisher', 'License', 'Cost','Total Cost'])
+        writer.writerow(['Computer','Software', 'Publisher', 'License', 'Applied', 'Cost','Total Cost'])
         writer.writerow(['',''])
 
         comp_id = request.POST['computer_id']

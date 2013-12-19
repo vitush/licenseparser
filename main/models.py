@@ -58,10 +58,22 @@ class Application(models.Model):
         return "Unknown"
 
 
+class Licenses(models.Model):
+    name = models.CharField(max_length=100,unique=True)
+    applications = models.ManyToManyField(Application,null=True)
+    owner = models.CharField(max_length=100,unique=False)
+
+    def __unicode__(self):
+        return self.name
+
+    class Meta:
+        ordering = ['name']
+
 class Computer(models.Model):
     name = models.CharField(max_length=30,unique=False)
     owner = models.CharField(max_length=100,unique=False)
     applications =  models.ManyToManyField(Application)
+    licenses = models.ManyToManyField(Licenses)
 
     def __unicode__(self):
         return self.name
