@@ -102,7 +102,7 @@ class myThread (threading.Thread):
                 if created:
                     application.save()
 
-                print (u"=> Found : (%s , %s)"% (computer.name,application.get_name()))
+                #print (u"=> Found : (%s , %s)"% (computer.name,application.get_name()))
 
                 computer.applications.add(application)
 

@@ -141,17 +141,17 @@ def licenses(request):
 
 
     if license is not None:
-        print("License: %s"% license)
+        #print("License: %s"% license)
 
         included_apps = license.applications.all()
-        print(included_apps )
+        #print(included_apps )
 
         if len(included_apps) > 0 :
-            print("Getting filtered")
+            #print("Getting filtered")
             c['software_licensed'] = models.Application.objects.exclude(id__in=included_apps).filter(license=2)
             #c['software_licensed'] = models.Application.objects.filter(license=2)
         else:
-            print("Getting All")
+            #print("Getting All")
             c['software_licensed'] =  models.Application.objects.filter(license=2)
 
         c['applications_included'] = included_apps
