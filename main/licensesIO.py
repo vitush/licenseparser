@@ -42,7 +42,8 @@ class myThread (threading.Thread):
         docs = sorted(os.listdir(dir))
         self.files_total = len(docs)
 
-        models.Computer.objects.all().delete()
+        for pc in models.Computer.objects.all():
+            pc.applications.remove(pc.applications)
 
         for doc in docs:
             f= dir+"/"+doc
@@ -69,7 +70,7 @@ class myThread (threading.Thread):
 
 
 
-            computer = models.Computer.objects.create(name=pc_name, owner=pc_owner)
+            computer, created = models.Computer.objects.get_or_create(name=pc_name, owner=pc_owner)
             if computer is not None:
                 #print("Created %s"% computer)
                 computer.save()
