@@ -37,16 +37,12 @@ class myThread (threading.Thread):
 
         pass
 
-    def clean_data(self):
-        for pc in models.Computer.objects.all():
-            pc.applications.all().delete()
-
     def load(self):
         dir = settings.DATA_ROOT
         docs = os.listdir(dir)
         self.files_total = len(docs)
 
-        self.clean_data()
+        models.Computer.objects.all().delete()
 
         for doc in docs:
             f= dir+"/"+doc
@@ -72,7 +68,7 @@ class myThread (threading.Thread):
 
 
 
-            computer, created = models.Computer.objects.get_or_create(name=pc_name, owner=pc_owner)
+            computer = models.Computer.objects.create(name=pc_name, owner=pc_owner)
             if computer is not None:
                 #print("Created %s"% computer)
                 computer.save()
