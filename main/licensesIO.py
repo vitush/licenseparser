@@ -37,12 +37,16 @@ class myThread (threading.Thread):
 
         pass
 
+    def clean_data(self):
+        for pc in models.Computer.objects.all():
+            pc.applications.all().delete()
+
     def load(self):
         dir = settings.DATA_ROOT
         docs = os.listdir(dir)
         self.files_total = len(docs)
 
-        models.Computer.objects.all().delete()
+        self.clean_data()
 
         for doc in docs:
             f= dir+"/"+doc
