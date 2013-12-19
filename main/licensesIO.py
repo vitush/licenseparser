@@ -124,8 +124,8 @@ class myThread (threading.Thread):
                      ver = element[0].firstChild.data
                      #ver = unicodedata.normalize('NFKD', element[0].firstChild.data).encode('ascii','ignore')
                      sw["version"] = element[0].firstChild.data
-                     #sw["name"] += " - "
-                     #sw["name"] += element[0].firstChild.data
+                     sw["name"] += " - "
+                     sw["name"] += element[0].firstChild.data
 
 
         element = doc.getElementsByTagName('Publisher')
