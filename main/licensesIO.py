@@ -43,8 +43,8 @@ class myThread (threading.Thread):
         self.files_total = len(docs)
 
         for pc in models.Computer.objects.all():
-            while pc.applications.all() >0:
-                pc.applications.remove(0)
+            for app in  pc.applications.all():
+                pc.applications.remove.(app)
 
         for doc in docs:
             f= dir+"/"+doc
