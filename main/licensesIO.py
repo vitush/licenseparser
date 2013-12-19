@@ -72,7 +72,7 @@ class myThread (threading.Thread):
 
 
 
-            computer = models.Computer.objects.create(name=pc_name, owner=pc_owner)
+            computer, created = models.Computer.objects.get_or_create(name=pc_name, owner=pc_owner)
             if computer is not None:
                 #print("Created %s"% computer)
                 computer.save()
