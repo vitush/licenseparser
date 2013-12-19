@@ -16,6 +16,19 @@
 
     </script>
 
+
+<style type="text/css">
+.selectwidthauto
+{
+     width:350px !important;
+}
+.selectwidthauto1
+{
+     width:500px !important;
+}
+</style>
+
+
 <form id="form_licenses"  action="/licenses/" method="post">  {% csrf_token %}
 <div class="span4">
 <h5>License </h5>
@@ -51,7 +64,7 @@
 <div class="span4">
 <h5>Include</h5>
 
-            <select id="applications_included" name="applications_included"  multiple="true" size="10">
+            <select id="applications_included" name="applications_included"  multiple="true" size="10" class="selectwidthauto">
                 {% for app in applications_included %}
                    <option value="{{app.id}}"
                            title="{{app.name}}">{{app.name}}</option>
@@ -65,7 +78,7 @@
 <div class="span4">
 <h5>Not Include</h5>
 
-            <select id="software_licensed" name="software_licensed" multiple="true" size="10">
+            <select id="software_licensed" name="software_licensed" multiple="true" size="10" class="selectwidthauto">
                 {% for app in software_licensed %}
                    <option value="{{app.id}}"
                            title="{{app.name}}">{{app.name}}</option>

@@ -55,7 +55,7 @@
       <file leaf-file-name="manage.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/manage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="0" selection-start="1968" selection-end="2346" vertical-scroll-proportion="-11.75" vertical-offset="663" max-vertical-offset="1545">
+            <state line="29" column="0" selection-start="889" selection-end="1023" vertical-scroll-proportion="-10.625" vertical-offset="180" max-vertical-offset="1545">
               <folding />
             </state>
           </provider>
@@ -82,7 +82,7 @@
       <file leaf-file-name="licenses.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/licenses.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="9" selection-start="2484" selection-end="2484" vertical-scroll-proportion="0.7922078" vertical-offset="607" max-vertical-offset="1260">
+            <state line="80" column="116" selection-start="2439" selection-end="2439" vertical-scroll-proportion="0.77922076" vertical-offset="720" max-vertical-offset="1455">
               <folding />
             </state>
           </provider>
@@ -1004,7 +1004,11 @@
       <created>1387450358113</created>
       <updated>1387450358113</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="Release 1">
+      <created>1387450568001</created>
+      <updated>1387450568001</updated>
+    </task>
+    <option name="localTasksCounter" value="123" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1193,13 +1197,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/manage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="0" selection-start="1968" selection-end="2346" vertical-scroll-proportion="-11.75" vertical-offset="663" max-vertical-offset="1545">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/computers.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="75" selection-start="775" selection-end="775" vertical-scroll-proportion="-15.0" vertical-offset="0" max-vertical-offset="1005">
@@ -1225,9 +1222,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/manage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="889" selection-end="1023" vertical-scroll-proportion="-10.625" vertical-offset="180" max-vertical-offset="1545">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/licenses.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="9" selection-start="2484" selection-end="2484" vertical-scroll-proportion="0.7922078" vertical-offset="607" max-vertical-offset="1260">
+        <state line="80" column="116" selection-start="2439" selection-end="2439" vertical-scroll-proportion="0.77922076" vertical-offset="720" max-vertical-offset="1455">
           <folding />
         </state>
       </provider>
