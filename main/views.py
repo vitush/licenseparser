@@ -125,13 +125,13 @@ def licenses(request):
             for app_id in request.POST.getlist('software_licensed'):
                 app = models.Application.objects.get(id=app_id)
                 license.applications.add(app)
-                print("Added %s"% app.name)
+                #print("Added %s"% app.name)
 
         elif action == "Remove Software":
             for app_id in request.POST.getlist('applications_included'):
                 app = models.Application.objects.get(id=app_id)
                 license.applications.remove(app)
-                print("Removed %s"% app.name)
+                #print("Removed %s"% app.name)
 
 
     try:
