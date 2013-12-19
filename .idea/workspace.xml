@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0390a5a0-99cb-4d99-9a99-40cbfe6dec10" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/views.py" afterPath="$PROJECT_DIR$/main/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/licenses.html" afterPath="$PROJECT_DIR$/templates/licenses.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="a404b25d-6ec1-41eb-868f-7c8799b765b0" name="New changelist" comment="" />
@@ -30,10 +30,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="113" column="16" selection-start="3219" selection-end="3219" vertical-scroll-proportion="0.34421366" vertical-offset="1463" max-vertical-offset="6420">
+            <state line="113" column="16" selection-start="3219" selection-end="3219" vertical-scroll-proportion="0.0" vertical-offset="1463" max-vertical-offset="6420">
               <folding>
                 <element signature="e#26#66#0" expanded="true" />
               </folding>
@@ -79,10 +79,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="licenses.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="licenses.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/licenses.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="47" selection-start="2296" selection-end="2296" vertical-scroll-proportion="-16.172413" vertical-offset="67" max-vertical-offset="1230">
+            <state line="73" column="9" selection-start="2484" selection-end="2484" vertical-scroll-proportion="0.7922078" vertical-offset="607" max-vertical-offset="1260">
               <folding />
             </state>
           </provider>
@@ -128,9 +128,9 @@
         <option value="$PROJECT_DIR$/licenses/urls.py" />
         <option value="$PROJECT_DIR$/main/models.py" />
         <option value="$PROJECT_DIR$/templates/base.html" />
-        <option value="$PROJECT_DIR$/templates/licenses.html" />
         <option value="$PROJECT_DIR$/templates/computers.html" />
         <option value="$PROJECT_DIR$/main/views.py" />
+        <option value="$PROJECT_DIR$/templates/licenses.html" />
       </list>
     </option>
   </component>
@@ -1000,7 +1000,11 @@
       <created>1387450066294</created>
       <updated>1387450066294</updated>
     </task>
-    <option name="localTasksCounter" value="121" />
+    <task id="LOCAL-00121" summary="Release 1">
+      <created>1387450358113</created>
+      <updated>1387450358113</updated>
+    </task>
+    <option name="localTasksCounter" value="122" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1203,13 +1207,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/licenses.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="47" selection-start="2296" selection-end="2296" vertical-scroll-proportion="-16.172413" vertical-offset="67" max-vertical-offset="1230">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="75" column="12" selection-start="2164" selection-end="2172" vertical-scroll-proportion="0.0" vertical-offset="536" max-vertical-offset="1335">
@@ -1221,10 +1218,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="16" selection-start="3219" selection-end="3219" vertical-scroll-proportion="0.34421366" vertical-offset="1463" max-vertical-offset="6420">
+        <state line="113" column="16" selection-start="3219" selection-end="3219" vertical-scroll-proportion="0.0" vertical-offset="1463" max-vertical-offset="6420">
           <folding>
             <element signature="e#26#66#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/licenses.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="9" selection-start="2484" selection-end="2484" vertical-scroll-proportion="0.7922078" vertical-offset="607" max-vertical-offset="1260">
+          <folding />
         </state>
       </provider>
     </entry>
