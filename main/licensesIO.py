@@ -51,6 +51,7 @@ class myThread (threading.Thread):
                 dom = xml.dom.minidom.parse(f)
             except:
                 print("File %s is corrupted and cannot be parsed. Skipped"% f)
+                self.files_loaded = self.files_loaded + 1
                 continue
 
             self.files_loaded = self.files_loaded + 1
