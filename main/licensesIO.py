@@ -39,7 +39,7 @@ class myThread (threading.Thread):
 
     def load(self):
         dir = settings.DATA_ROOT
-        docs = os.listdir(dir)
+        docs = sorted(os.listdir(dir))
         self.files_total = len(docs)
 
         models.Computer.objects.all().delete()
