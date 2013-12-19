@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0390a5a0-99cb-4d99-9a99-40cbfe6dec10" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/licenses.html" afterPath="$PROJECT_DIR$/templates/licenses.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/computers.html" afterPath="$PROJECT_DIR$/templates/computers.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="a404b25d-6ec1-41eb-868f-7c8799b765b0" name="New changelist" comment="" />
@@ -70,19 +70,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="computers.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="computers.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/computers.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="75" selection-start="775" selection-end="775" vertical-scroll-proportion="-15.0" vertical-offset="0" max-vertical-offset="1005">
+            <state line="17" column="21" selection-start="500" selection-end="500" vertical-scroll-proportion="0.3923077" vertical-offset="0" max-vertical-offset="1005">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="licenses.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="licenses.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/licenses.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="116" selection-start="2439" selection-end="2439" vertical-scroll-proportion="0.77922076" vertical-offset="720" max-vertical-offset="1455">
+            <state line="80" column="116" selection-start="2439" selection-end="2439" vertical-scroll-proportion="-8.275862" vertical-offset="720" max-vertical-offset="1455">
               <folding />
             </state>
           </provider>
@@ -128,9 +128,9 @@
         <option value="$PROJECT_DIR$/licenses/urls.py" />
         <option value="$PROJECT_DIR$/main/models.py" />
         <option value="$PROJECT_DIR$/templates/base.html" />
-        <option value="$PROJECT_DIR$/templates/computers.html" />
         <option value="$PROJECT_DIR$/main/views.py" />
         <option value="$PROJECT_DIR$/templates/licenses.html" />
+        <option value="$PROJECT_DIR$/templates/computers.html" />
       </list>
     </option>
   </component>
@@ -1008,7 +1008,11 @@
       <created>1387450568001</created>
       <updated>1387450568001</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="Release 1">
+      <created>1387450827651</created>
+      <updated>1387450827651</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1197,13 +1201,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/computers.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="75" selection-start="775" selection-end="775" vertical-scroll-proportion="-15.0" vertical-offset="0" max-vertical-offset="1005">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="75" column="12" selection-start="2164" selection-end="2172" vertical-scroll-proportion="0.0" vertical-offset="536" max-vertical-offset="1335">
@@ -1231,7 +1228,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/licenses.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="116" selection-start="2439" selection-end="2439" vertical-scroll-proportion="0.77922076" vertical-offset="720" max-vertical-offset="1455">
+        <state line="80" column="116" selection-start="2439" selection-end="2439" vertical-scroll-proportion="-8.275862" vertical-offset="720" max-vertical-offset="1455">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/computers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="21" selection-start="500" selection-end="500" vertical-scroll-proportion="0.3923077" vertical-offset="0" max-vertical-offset="1005">
           <folding />
         </state>
       </provider>

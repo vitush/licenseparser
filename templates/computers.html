@@ -15,7 +15,7 @@
             {% for lc in licenses %}
                 <option value="{{lc.id}}" {% if lc.id == licenses_selected %} selected {% endif %} >{{lc.name}}</option>
             {% endfor %}
-        </select>
+        </select><br>
         <input class="btn" name="action" type="submit" value="Add"  >
         <input class="btn" name="action" type="submit" value="Remove" >
 
