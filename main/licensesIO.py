@@ -59,7 +59,7 @@ class myThread (threading.Thread):
                 self.files_loaded = self.files_loaded + 1
                 continue
 
-            self.files_loaded = self.files_loaded + 1
+            self.files_loaded += 1
             self.files_current = doc
 
             if  dom.getElementsByTagName('Computer_name')[0].firstChild is None :

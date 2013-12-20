@@ -3,6 +3,17 @@
 {% block page_content %}
 
 
+    <script>
+        function deletepc(pcid) {
+
+            document.getElementById("deletepc_id").value=pcid;
+            document.getElementById("form_computers_id").submit();
+            document.getElementById("form_computers_id").submit();
+        }
+
+
+    </script>
+
 
 <div class="span12">
 <h5>Computers</h5>
@@ -34,10 +45,12 @@
     <hr>
 </div>
 <div class="row">
+    <input type="hidden" id="deletepc_id" name="deletepc_id" value="">
     <table class="table">
     <thead>
      <th>Computer</th>
      <th>Applayed Licenses</th>
+     <th>  <input type="submit" class="btn btn-mini btn-danger" name="action" value="Delete All PC"></th>
     </thead>
     <tbody>
         {% for comp  in computers %}
@@ -48,6 +61,9 @@
                         <p title="License owner: {{ lc.owner }}">{{ lc.name  }}</p>
                     {% endfor %}
 
+                </td>
+                <td>
+                    <input type="submit" class="btn btn-mini btn-warning" name="action" value="Delete PC" onclick="deletepc({{ comp.id }})">
                 </td>
             </tr>
         {%  endfor %}

@@ -48,6 +48,15 @@ def computers(request):
         if license is None:
             return Http404()
 
+        if action == "Delete All PC":
+            models.Computer.objects.all().delete()
+
+        if action == "Delete PC":
+            pc_id = request.POST.get('deletepc_id',None)
+            if pc_id is not None:
+                pc = models.Computer.objects.get(id=pc_id)
+                print(u"Deleted PC : %s"% pc.name)
+                pc.delete()
 
         if action == "Add":
             for comp_id in computer_id_list:
