@@ -45,6 +45,7 @@ class myThread (threading.Thread):
         self.files_current = "Cleaning up old data. Please Wait!"
 
         for pc in models.Computer.objects.all():
+            self.files_current = u"Cleaning up data for Computer %s. Please Wait!"%pc.name
             for app in  pc.applications.all():
                 pc.applications.remove(app)
 
