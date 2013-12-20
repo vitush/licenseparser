@@ -44,7 +44,7 @@ class myThread (threading.Thread):
 
         for pc in models.Computer.objects.all():
             for app in  pc.applications.all():
-                pc.applications.remove.(app)
+                pc.applications.remove(app)
 
         for doc in docs:
             f= dir+"/"+doc
