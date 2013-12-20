@@ -81,7 +81,7 @@
                    <option value="{{sw.id}}"
                            ondblclick="swinfo('licensed_software_id');"
                            title="{{sw}} ({{sw.publisher}}) " >
-                        {% if sw.cost > 0 %} [ {{ sw.cost }} UAH ]  {% endif %} {{sw}}</option>
+                        {{sw}} {% if sw.cost > 0 %} [ {{ sw.cost }} UAH ]  {% endif %}  </option>
                 {% endfor %}
             </select>
 
