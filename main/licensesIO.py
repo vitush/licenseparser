@@ -42,7 +42,7 @@ class myThread (threading.Thread):
         docs = sorted(os.listdir(dir))
         self.files_total = len(docs)
 
-        self.files_current = "Cleaning up old Data. Please Wait"
+        self.files_current = "Cleaning up old data. Please Wait!"
 
         for pc in models.Computer.objects.all():
             for app in  pc.applications.all():
